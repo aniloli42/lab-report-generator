@@ -1,0 +1,263 @@
+{
+  "haematology": [
+    {
+      "test": "wbc",
+      "name": "WBC",
+      "unit": "/cu-mm",
+      "ref": "4000-11000"
+    },
+    {
+      "test": "rbc",
+      "name": "RBC",
+      "unit": "Million cu-mm",
+      "ref": "4.5-6.5"
+    },
+    {
+      "test": "platelates",
+      "name": "Platelates",
+      "unit": "/cu-mm",
+      "ref": "150000-450000"
+    },
+    {
+      "test": "hb",
+      "name": "HB",
+      "unit": "G/dl",
+      "ref": "M12.5-180 F11.5-16.5"
+    },
+    {
+      "test": "pcv",
+      "name": "PCV",
+      "unit": "Fl",
+      "ref": "36% - 54%"
+    },
+    {
+      "test": "mcv",
+      "name": "MCV",
+      "unit": "Fl"
+    },
+    {
+      "test": "mch",
+      "name": "MCH",
+      "unit": "Pg"
+    },
+    {
+      "test": "mchc",
+      "name": "MCHC",
+      "unit": "%"
+    }
+  ],
+  "differential": [
+    {
+      "test": "neutrophil",
+      "name": "Neutrophil",
+      "unit": "%",
+      "ref": "40-70"
+    },
+    {
+      "test": "lymphocyte",
+      "name": "Lymphocyte",
+      "unit": "%",
+      "ref": "20-40"
+    },
+    {
+      "test": "monocyte",
+      "name": "Monocyte",
+      "unit": "%",
+      "ref": "2-10"
+    },
+    {
+      "test": "eosinophil",
+      "name": "Esinophil",
+      "unit": "%",
+      "ref": "2-6"
+    },
+    {
+      "test": "basophils",
+      "name": "Basophils",
+      "unit": "%",
+      "ref": "0-1"
+    },
+    {
+      "test": "reticulocyte",
+      "name": "Reticulocyte",
+      "unit": "%",
+      "ref": "2-6"
+    },
+    {
+      "test": "esr",
+      "name": "ESR-(Wintrobes's)",
+      "unit": "mm/1st hr",
+      "ref": "M 0-9 F 0-20"
+    },
+    {
+      "test": "bt",
+      "name": "BT",
+      "unit": "mm/min",
+      "ref": "1-7"
+    },
+    {
+      "test": "ct",
+      "name": "CT",
+      "unit": "mm/min",
+      "ref": "5-10"
+    },
+    {
+      "test": "rh",
+      "name": "Blood Group/RH"
+    },
+    {
+      "test": "mpMf",
+      "name": "Mp/MF"
+    },
+    {
+      "test": "sickline",
+      "name": "Sickline test"
+    }
+  ],
+  "biochemistry": [
+    {
+      "test": "fasting",
+      "name": "Fasting (F)",
+      "unit": "mg%",
+      "ref": "70-110"
+    },
+    {
+      "test": "bloodSugar",
+      "name": "Blood Sugar (PP)",
+      "unit": "mg%",
+      "ref": "70-140"
+    },
+    {
+      "test": "random",
+      "name": "Random (R)",
+      "unit": "mg%",
+      "ref": "70-140"
+    },
+    {
+      "test": "bUrea",
+      "name": "B-urea",
+      "unit": "mg%",
+      "ref": "15-45"
+    },
+    {
+      "test": "sCreatinine",
+      "name": "S-creatinine",
+      "unit": "mg%",
+      "ref": "0.4-1.4"
+    },
+    {
+      "test": "uricAcid",
+      "name": "Uric Acid",
+      "unit": "mg%",
+      "ref": "M 2-7 F 2-6"
+    },
+    {
+      "test": "bilirubinTotal",
+      "name": "Bilirubin Total",
+      "unit": "mg%",
+      "ref": "0.4-1.2"
+    },
+    {
+      "test": "bilirubinDirect",
+      "name": "Bilirubin Direct",
+      "unit": "mg%",
+      "ref": "0.0-0.4"
+    },
+    {
+      "test": "alp",
+      "name": "ALP",
+      "unit": "IU/L",
+      "ref": "80-310"
+    },
+    {
+      "test": "sgpt",
+      "name": "SGPT",
+      "unit": "IU/L",
+      "ref": "5-49"
+    },
+    {
+      "test": "sgot",
+      "name": "SGOT",
+      "unit": "IU/L",
+      "ref": "5-45"
+    },
+    {
+      "test": "totalProtein",
+      "name": "Total Protein",
+      "unit": "Mg%",
+      "ref": "6-8"
+    },
+    {
+      "test": "albumin",
+      "name": "Albumin",
+      "unit": "Mg%",
+      "ref": "3.5-5"
+    },
+    {
+      "test": "totalCholestrol",
+      "name": "Total-Cholestrol",
+      "unit": "Mg%",
+      "ref": "150-250"
+    },
+    {
+      "test": "triglycerides",
+      "name": "Triglycerides",
+      "unit": "Mg%",
+      "ref": "30-170"
+    },
+    {
+      "test": "hdlCholesterol",
+      "name": "HDL-cholesterol",
+      "unit": "Mg%",
+      "ref": ">35"
+    },
+    {
+      "test": "ldlCholesterol",
+      "name": "LDL-cholesterol",
+      "unit": "Mg%",
+      "ref": "<150"
+    },
+    {
+      "test": "vldl",
+      "name": "VLDL",
+      "unit": "Mg%",
+      "ref": "<40"
+    },
+    {
+      "test": "ldh",
+      "name": "LDH",
+      "unit": "Mg%",
+      "ref": "225-450"
+    },
+    {
+      "test": "cpk",
+      "name": "CPK",
+      "unit": "IU/L",
+      "ref": "<190"
+    },
+    {
+      "test": "sodium",
+      "name": "Na+(Sodium)",
+      "unit": "MEq/L",
+      "ref": "135-155"
+    },
+    {
+      "test": "potassium",
+      "name": "K+(Potassium)",
+      "unit": "MEq/L",
+      "ref": "3.5-5.5"
+    },
+    {
+      "test": "serumAmylase",
+      "name": "Serum Amylase",
+      "unit": "IU/L",
+      "ref": "<200"
+    },
+    {
+      "test": "calcium",
+      "name": "Calcium",
+      "unit": "Mg%",
+      "ref": "8.7-10.4"
+    }
+  ]
+}

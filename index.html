@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Login | Lab Report</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="login-div">
+        <div class="login-title">
+          <h1>Login | Lab Report</h1>
+        </div>
+        <form method="post" id="userForm">
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input
+              type="text"
+              id="username"
+              class="form-item form-input"
+              placeholder="Type your username"
+            />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <div>
+              <input
+                type="password"
+                id="password"
+                class="form-item form-input"
+                placeholder="Type your password"
+              />
+              <span> <img src="imgs/eye.svg" alt="show" id="showBtn" /></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="form-button" id="submitButton">
+              Log In
+            </button>
+          </div>
+        </form>
+        <div class="show-message" id="showMessage"></div>
+      </div>
+    </div>
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>

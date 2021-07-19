@@ -1,0 +1,354 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Common Variables */
+:root {
+  --back-color: #0b0044;
+  --btn-color: #1f0d79;
+  --btn-danger-color: rgb(182, 38, 38);
+  --text-color: var(--back-color);
+  --light: #fff;
+}
+
+/* body */
+body {
+  position: relative;
+}
+
+/* Mobile First Approach */
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+}
+
+/* header */
+header {
+  align-self: start;
+  background-color: var(--back-color);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 15px;
+  user-select: none;
+}
+
+header .brand h1 {
+  font-size: 20px;
+  color: var(--light);
+}
+
+/* Back Button */
+header .back-btn {
+  background-color: var(--btn-color);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Grid Container */
+.grid-container form {
+  align-self: start;
+  margin: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 5px;
+  user-select: none;
+}
+
+/* input-group */
+.input-group {
+  border: 1px solid var(--back-color);
+  padding: 5px 10px;
+}
+
+/* gender */
+
+#gender input[type="radio"] {
+  margin: 0 5px;
+}
+
+#testInclude .input-group {
+  margin-top: 5px;
+}
+
+.input-group#submit input {
+  background-color: var(--btn-color);
+  color: #fff;
+  outline: none;
+  border: none;
+  padding: 10px 30px;
+  height: auto;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.input-group#submit input[type="reset"] {
+  background-color: var(--btn-danger-color);
+  margin-left: 5px;
+}
+
+.input-group .input-title {
+  border-bottom: 1px solid #000;
+  font-weight: bold;
+}
+
+/* input-group > form > input-div */
+.input-group .input-div {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+/* Input label */
+.input-group .input-div label {
+  margin-right: 10px;
+  min-width: 80px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* input-group > input-div */
+.input-group .input-div input {
+  height: 30px;
+  padding: 5px;
+}
+
+.input-group#test label {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.input-group#test label input {
+  margin-right: 5px;
+}
+
+/* input-group > form > input-div */
+.input-group .input-div .inputfield {
+  display: flex;
+}
+
+/* input-group > input-div */
+.input-group .input-div .unit {
+  background-color: var(--btn-color);
+  color: #fff;
+  width: auto;
+  height: 30px;
+  padding: 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-group .input-div .inputfield #rbc + .unit {
+  font-size: 12px;
+}
+
+/* footer */
+.footer {
+  align-self: end;
+  width: 100%;
+  background-color: var(--back-color);
+  color: #fff;
+  text-align: center;
+  padding: 10px 0px;
+}
+
+/* PRINT SECTION */
+
+section#print {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+}
+
+/* contact details */
+article#contactDetails {
+  display: grid;
+  grid-template-areas:
+    "pan num1"
+    "reg num2";
+  width: 95%;
+  margin: 0 auto;
+}
+
+section#print article p {
+  font-weight: bold;
+}
+
+article #pan {
+  grid-area: pan;
+}
+
+article #reg {
+  grid-area: reg;
+}
+
+article #num1 {
+  grid-area: num1;
+  justify-self: end;
+}
+
+article #num2 {
+  grid-area: num2;
+  justify-self: end;
+}
+
+/* lab name & address */
+section#print header {
+  background-color: #fff;
+  flex-direction: column;
+}
+
+section#print h1 {
+  font-size: 2.2em;
+  font-weight: bolder;
+  text-align: center;
+}
+
+/* patientDetails */
+
+article#patientDetails {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 10px;
+  border: 2px solid;
+  width: 95%;
+  margin: 0 auto;
+}
+
+#showDate {
+  justify-self: end;
+}
+
+#showPatientSex {
+  justify-self: end;
+}
+
+#showLabNo {
+  justify-self: end;
+}
+
+/* bigger than 480 px */
+@media (min-width: 480px) {
+  /* Input label */
+  .input-group .input-div label {
+    min-width: 150px;
+  }
+}
+
+/* manage print btn */
+#printManageBtns {
+  width: 95%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+  margin: 10px auto;
+}
+
+#print button {
+  width: 100%;
+  height: 40px;
+  font-weight: bold;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* fontUI */
+.fontUI {
+  font-family: wingdings;
+}
+
+/* show report */
+#showReports {
+  width: 95%;
+  margin: 0 auto;
+}
+
+#showReports section {
+  width: 100%;
+}
+
+#showReports section table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+  border-width: 1px;
+}
+
+#showReports section table * {
+  border-collapse: collapse;
+  border-style: solid;
+  border-color: #000;
+  border-width: 1px;
+  padding: 3px;
+}
+
+#errorDiv {
+  display: flex;
+  position: sticky;
+  bottom: 0px;
+  z-index: 5;
+  transition: all 250ms ease-in-out;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: center;
+  padding: 15px;
+  font-size: 18px;
+  color: #fff;
+  background-color: red;
+  font-weight: bold;
+}
+
+/* bigger than 720px */
+@media (min-width: 720px) {
+  /* Input label */
+  .input-group .input-div label {
+    min-width: 200px;
+  }
+}
+
+/* bigger than 1080px */
+@media (min-width: 1080px) {
+  .grid-container {
+    width: 980px;
+    margin: 0 auto;
+  }
+}
+
+/* print css */
+@media print {
+  section#print {
+    width: 100%;
+    height: 100%;
+    -webkit-print-color-adjust: exact !important;
+  }
+
+  #printManageBtns {
+    display: none;
+  }
+}

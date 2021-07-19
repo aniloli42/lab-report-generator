@@ -1,0 +1,141 @@
+:root {
+  --margin: 20px;
+  --padding: 20px;
+  --primary: #ffc947;
+  --secondary: #185adb;
+  --light: #feddbe;
+  --dark: #0a1931;
+  --white: #fff;
+  --black: #000;
+  --text-color-light: #fff;
+  --text-color-dark: #000;
+  --border: 1px solid #000;
+  --border-px: 5px;
+  --border-half: 50%;
+  --width: 100%;
+  --font-size: 16px;
+  --height: auto;
+}
+
+/* Universal Select for removing the padding and margin */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* container */
+.container {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background-color: var(--dark);
+}
+
+/* login div */
+.login-div {
+  background-color: var(--white);
+  padding-top: var(--padding);
+  padding-bottom: var(--padding);
+  width: 90%;
+}
+
+.login-div .login-title {
+  text-align: center;
+  padding: var(--padding);
+  --padding: 10px;
+}
+
+.login-div .login-title h1 {
+  font-size: var(--font-size);
+  --font-size: 22px;
+}
+
+.login-div form {
+  padding-left: var(--padding);
+  padding-right: var(--padding);
+}
+
+.login-div form .form-group {
+  margin: var(--margin);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.login-div form .form-group:nth-child(2) div {
+  display: flex;
+  grid-column: 1/4;
+  align-items: flex-end;
+  gap: 5px;
+}
+
+.login-div form .form-group label {
+  grid-column: 1/4;
+  font-size: var(--font-size);
+  --font-size: 13px;
+  font-weight: bold;
+  color: #807e7e;
+}
+
+.login-div form .form-group input {
+  grid-column: 1/4;
+  width: var(--width);
+  height: var(--height);
+  --height: 30px;
+  outline: none;
+  color: var(--black);
+  border: none;
+  border-bottom: 2px solid var(--blue, #000);
+  --blue: #fac;
+  padding: 0 5px;
+}
+
+.login-div form .form-group input::placeholder {
+  font-weight: normal;
+}
+
+.login-div form .form-group div span {
+  cursor: pointer;
+  color: blueviolet;
+  font-size: 14px;
+  user-select: none;
+}
+
+.login-div form .form-group div span img {
+  width: 20px;
+  height: 20px;
+  color: aqua;
+}
+
+.login-div form .form-group button {
+  grid-column: 1/4;
+  width: var(--width);
+  border: none;
+  border-radius: 20px;
+  font-size: 15px;
+  background-image: linear-gradient(to right, var(--secondary), var(--primary));
+  color: var(--white);
+  padding: 10px 0;
+  cursor: pointer;
+  transition: background-image 200ms ease-in-out;
+}
+
+.login-div form .form-group button:hover {
+  background-image: linear-gradient(to right, var(--secondary), var(--dark));
+}
+
+.login-div .show-message {
+  margin: 0px 20px;
+  text-align: center;
+  font-size: 14px;
+  color: red;
+}
+
+@media (min-width: 576px) {
+  .login-div {
+    width: 400px;
+  }
+}

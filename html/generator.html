@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/generator.css" />
+    <title>Generating Report | Lab Report Generator</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <header>
+        <div class="brand"><h1>Lab Report Generator</h1></div>
+        <div class="back-btn" id="backBTN">Back</div>
+      </header>
+
+      <!-- Grid Container -->
+      <div class="grid-container">
+        <form id="mainForm">
+          <!-- Patient Details -->
+          <div class="input-group">
+            <div class="input-title">PATIENT DETAILS</div>
+            <div class="input-div">
+              <label for="patientName">Name</label>
+              <input type="text" name="patientName" id="patientName" required />
+            </div>
+            <div class="input-div" id="gender">
+              <label for="patientGender">Gender</label>
+              <input
+                type="radio"
+                name="patientGender"
+                value="Male"
+                checked
+              />Male
+              <input type="radio" name="patientGender" value="Female" />Female
+            </div>
+            <div class="input-div">
+              <label for="patientAge">Age</label>
+              <input type="number" name="patientAge" id="patientAge" required />
+            </div>
+          </div>
+
+          <!-- Patient Details -->
+          <div class="input-group">
+            <div class="input-title">TECHNICAL DETAILS</div>
+            <div class="input-div">
+              <label for="doctorName">Doctor Name</label>
+              <input type="text" name="doctorName" id="doctorName" required />
+            </div>
+            <div class="input-div">
+              <label for="labNo">Lab No</label>
+              <input type="number" name="labNo" id="labNo" required />
+            </div>
+          </div>
+
+          <!-- TEST -->
+          <div class="input-group" id="test">
+            <div class="input-title">TEST</div>
+
+            <label>
+              <input
+                type="checkbox"
+                data-checked="haematology"
+                name="checkTest"
+                value="haematology"
+              />
+              HAEMATOLOGY TEST
+            </label>
+
+            <label>
+              <input
+                type="checkbox"
+                data-checked="differential"
+                name="checkTest"
+                value="differential"
+              />
+              DIFFERENTIAL COUNT
+            </label>
+
+            <label>
+              <input
+                type="checkbox"
+                data-checked="biochemistry"
+                name="checkTest"
+                value="biochemistry"
+              />
+              BIOCHEMISTRY TEST
+            </label>
+
+            <label>
+              <input
+                type="checkbox"
+                data-checked="semen"
+                name="checkTest"
+                value="semen"
+              />
+              SEMEN ANALYSIS
+            </label>
+
+            <label>
+              <input
+                type="checkbox"
+                data-checked="serology"
+                name="checkTest"
+                value="serology"
+              />
+              SEROLOGY TEST
+            </label>
+
+            <label>
+              <input
+                type="checkbox"
+                data-checked="widal"
+                name="checkTest"
+                value="widal"
+              />
+              WIDAL TEST
+            </label>
+
+            <label>
+              <input
+                type="checkbox"
+                data-checked="urine"
+                name="checkTest"
+                value="urine"
+              />
+              URINE ANALYSIS
+            </label>
+          </div>
+
+          <!-- test Includes -->
+          <div id="testInclude"></div>
+          <hr />
+          <div class="input-group" id="submit">
+            <div class="input-div">
+              <input type="submit" value="Generate" />
+              <input type="reset" value="Reset" id="resetBtn" />
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <!-- Error Message Show -->
+      <div id="errorDiv"></div>
+
+      <!-- Footer -->
+      <div class="footer">2021 &copy; Lab Report Generator - Anil Oli</div>
+    </div>
+
+    <!-- print Report  -->
+    <section id="print">
+      <article id="printManageBtns">
+        <button id="printPage">Print</button>
+        <button id="printEdit">Edit</button>
+        <button id="pageSave">Save</button>
+        <button id="printBack">Back</button>
+      </article>
+      <article id="contactDetails">
+        <p id="pan">PAN NO. 605875386</p>
+        <p id="reg">REG NO. 2074-75-616</p>
+        <p id="num1"><span class="fontUI">(</span> 9847983093</p>
+        <p id="num2"><span class="fontUI">(</span> 9822846895</p>
+      </article>
+      <header>
+        <h1>SAGARMATHA PATHOLOGY CENTER</h1>
+        <h2>GADHAWA 6 GADHAWA</h2>
+      </header>
+      <article id="patientDetails">
+        <p id="showPatientName">Name:</p>
+        <p id="showDate">Date:</p>
+        <p id="showPatientAge">Age:</p>
+        <p id="showPatientSex">Sex:</p>
+        <p id="showDoctorName">Doctor:</p>
+        <p id="showLabNo">Lab No:</p>
+      </article>
+
+      <!-- showreports -->
+      <article id="showReports"></article>
+    </section>
+
+    <script type="module" src="../js/generator.js" async></script>
+  </body>
+</html>
