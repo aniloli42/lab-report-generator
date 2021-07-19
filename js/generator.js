@@ -730,7 +730,7 @@ const labTestHTML = {
             </div>
 
             <div class="input-div">
-              <label for="urineHCG">Others</label>
+              <label for="urineOthers">Others</label>
               <div class="inputfield">
                 <input type="text" name="urineOthers" id="urineOthers" />
               </div>
@@ -763,7 +763,7 @@ const showPrintDiv = document.getElementById("print");
 
 // Back Button Implement
 backDashboardBtn.addEventListener("click", () => {
-  location.href = "dashboard.html";
+  location.href = "./dashboard.html";
 });
 
 //  fetch the checked data
@@ -828,7 +828,7 @@ mainForm.addEventListener("submit", (e) => {
 function testCheck() {
   let checkResult = [...checkTestHandler].some((check) => check.checked);
   if (!checkResult) {
-    errorMessage("Choose atleast one test");
+    errorMessage("Aauta bhaya ni lab test select garnus");
     return false;
   }
   return true;
@@ -917,7 +917,7 @@ async function reportSectionTestValidator(testName) {
 
 // data Fetcher
 async function testFetcher(testFetchName) {
-  let data = await fetch(`/json/test.json`);
+  let data = await fetch(`../json/test.json`);
   let fetchedData = await data.json();
   return fetchedData[`${testFetchName}`];
 }
@@ -974,6 +974,22 @@ function reportSectionCreator(testTitle, testDatas) {
 const printPageBtn = document.getElementById("printPage");
 printPageBtn.addEventListener("click", () => print());
 
-// save report
+// Edit the current details of patient
+const printEdit = document.querySelector("#printEdit");
 
-// back in generator
+printEdit.addEventListener("click", () => {
+  showPrintDiv.style.display = "none";
+  containerDiv.style.overflow = "unset";
+  showReports.innerHTML = "";
+});
+
+// New Patient Print Available
+const nextPatient = document.querySelector("#nextPatient");
+
+nextPatient.addEventListener("click", () => {
+  mainForm.reset();
+  testInclude.innerHTML = "";
+  showPrintDiv.style.display = "none";
+  containerDiv.style.overflow = "unset";
+  showReports.innerHTML = "";
+});

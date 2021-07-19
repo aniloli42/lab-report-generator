@@ -23,7 +23,14 @@
             <div class="input-title">PATIENT DETAILS</div>
             <div class="input-div">
               <label for="patientName">Name</label>
-              <input type="text" name="patientName" id="patientName" required />
+              <input
+                type="text"
+                name="patientName"
+                id="patientName"
+                required
+                oninvalid="this.setCustomValidity('Name k ho ni Patient ko')"
+                oninput="this.setCustomValidity('')"
+              />
             </div>
             <div class="input-div" id="gender">
               <label for="patientGender">Gender</label>
@@ -37,7 +44,14 @@
             </div>
             <div class="input-div">
               <label for="patientAge">Age</label>
-              <input type="number" name="patientAge" id="patientAge" required />
+              <input
+                type="number"
+                name="patientAge"
+                id="patientAge"
+                required
+                oninvalid="this.setCustomValidity('Age hanne bhulnu bhayo ta')"
+                oninput="this.setCustomValidity('')"
+              />
             </div>
           </div>
 
@@ -46,11 +60,25 @@
             <div class="input-title">TECHNICAL DETAILS</div>
             <div class="input-div">
               <label for="doctorName">Doctor Name</label>
-              <input type="text" name="doctorName" id="doctorName" required />
+              <input
+                type="text"
+                name="doctorName"
+                id="doctorName"
+                required
+                oninvalid="this.setCustomValidity('Afai aaunu bhako ki Doctor le patako ho')"
+                oninput="this.setCustomValidity('')"
+              />
             </div>
             <div class="input-div">
               <label for="labNo">Lab No</label>
-              <input type="number" name="labNo" id="labNo" required />
+              <input
+                type="number"
+                name="labNo"
+                id="labNo"
+                required
+                oninvalid="this.setCustomValidity('Kati ota Lab test paxi mero palo ho')"
+                oninput="this.setCustomValidity('')"
+              />
             </div>
           </div>
 
@@ -153,8 +181,7 @@
       <article id="printManageBtns">
         <button id="printPage">Print</button>
         <button id="printEdit">Edit</button>
-        <button id="pageSave">Save</button>
-        <button id="printBack">Back</button>
+        <button id="nextPatient">Next Patient</button>
       </article>
       <article id="contactDetails">
         <p id="pan">PAN NO. 605875386</p>

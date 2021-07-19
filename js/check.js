@@ -2,7 +2,7 @@ async function checkUser() {
   if (localStorage.length == 0) return;
   const user = await jsonReader();
   if (atob(localStorage.getItem("user")) != user.userkey) return;
-  location.replace("html/dashboard.html");
+  location.replace("../html/dashboard.html");
 }
 
 async function validate() {
@@ -18,7 +18,7 @@ function logout() {
 }
 
 async function jsonReader() {
-  const data = await fetch("/json/key.json");
+  const data = await fetch("../json/key.json");
   const user = await data.json();
   return user;
 }

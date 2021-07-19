@@ -7,9 +7,9 @@ document.getElementById("logout").addEventListener("click", () => {
 });
 
 document.getElementById("generatorDiv").addEventListener("click", () => {
-  location.assign("generator.html");
+  location.assign("./generator.html");
 });
 
 document.getElementById("savedDiv").addEventListener("click", () => {
-  location.assign("saved-report.html");
+  location.assign("./saved-report.html");
 });
