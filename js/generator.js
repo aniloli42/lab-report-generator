@@ -917,7 +917,7 @@ async function reportSectionTestValidator(testName) {
 
 // data Fetcher
 async function testFetcher(testFetchName) {
-  let data = await fetch(`../imp/test.json`);
+  let data = await fetch(`/json/test.json`);
   let fetchedData = await data.json();
   return fetchedData[`${testFetchName}`];
 }
@@ -937,7 +937,6 @@ function reportSectionCreator(testTitle, testDatas) {
   ];
   let showTitle = titleMaker.filter((title) => title.name == testTitle);
   let testHTML = `
-    <wbr/>
         <section>
           <header><h2>${showTitle[0]["visibleTitle"]}</h2></header>
           <table>
