@@ -259,5 +259,295 @@
       "unit": "Mg%",
       "ref": "8.7-10.4"
     }
+  ],
+  "semen": [
+    {
+      "test": "investigation",
+      "name": "Investigation",
+      "unit": "",
+      "ref": ""
+    },
+    {
+      "test": "collectionTime",
+      "name": "Collection Time",
+      "unit": "",
+      "ref": ""
+    },
+    {
+      "test": "valume",
+      "name": "Valume",
+      "unit": "ml",
+      "ref": "3-5ml"
+    },
+    {
+      "test": "colour",
+      "name": "Colour",
+      "unit": "",
+      "ref": ""
+    },
+    {
+      "test": "ph",
+      "name": "PH",
+      "unit": "",
+      "ref": ""
+    },
+    {
+      "test": "examinationTime",
+      "name": "Examination Time",
+      "unit": "",
+      "ref": ""
+    },
+    {
+      "test": "motile",
+      "name": "Motile",
+      "unit": "%",
+      "ref": "60-80%"
+    },
+    {
+      "test": "nonMotile",
+      "name": "Non Motile",
+      "unit": "%",
+      "ref": "20%"
+    },
+    {
+      "test": "sluggishMotile",
+      "name": "Sluggish Motile",
+      "unit": "",
+      "ref": ""
+    },
+    {
+      "test": "totalCount",
+      "name": "Test Count",
+      "unit": "million/ml",
+      "ref": ""
+    },
+    {
+      "test": "pusCell",
+      "name": "Pus Cell",
+      "unit": "/HPF",
+      "ref": ""
+    },
+    {
+      "test": "epithelialCell",
+      "name": "Epithelial Cell",
+      "unit": "/HPF",
+      "ref": ""
+    },
+    {
+      "test":"comment",
+      "name": "Comment",
+      "unit": "",
+      "ref": ""
+    }
+  ],
+  "serology":[
+    {
+      "test": "raFactor",
+      "name": "RA Factor",
+      "unit": "",
+      "ref": ""
+    },
+    {
+      "test": "crp",
+      "name": "CRP",
+      "unit": "",
+      "ref": ""
+    },
+    {
+      "test": "asoTitre",
+      "name": "ASOTitre",
+      "unit": "",
+      "ref": ""
+    },
+    {
+      "test": "hiv",
+      "name": "HIV",
+      "unit": "",
+      "ref": ""
+    },
+    {
+      "test": "hav",
+      "name": "HAV",
+      "unit": "",
+      "ref": ""
+    },
+    {
+      "test": "hcv",
+      "name": "HCV",
+      "unit": "",
+      "ref": ""
+    },
+    {
+      "test": "hbSag",
+      "name": "HBsAg",
+      "unit": "",
+      "ref": ""
+    },
+    {
+      "test": "vdrlRpr",
+      "name": "VDRL/RPR",
+      "unit": "",
+      "ref": ""
+    },
+    {
+      "test": "tpha",
+      "name": "TPHA",
+      "unit": "",
+      "ref": ""
+    },
+    {
+      "test": "dengue",
+      "name": "Dengue Igm/IgG",
+      "unit": "",
+      "ref": ""
+    },
+    {
+      "test": "troponinI",
+      "name": "Troponin I",
+      "unit": "",
+      "ref": ""
+    },
+    {
+      "test": "tbCard",
+      "name": "T.B card .IgG/Igm",
+      "unit": "",
+      "ref": ""
+    },
+    {
+      "test": "hPyloriIgG",
+      "name": "H-Pylori/IgG",
+      "unit": "",
+      "ref":""
+    },
+    {
+      "test": "hPyloriIgM",
+      "name": "H-Pylori/IgM",
+      "unit": "",
+      "ref": ""
+    },
+    {
+      "test": "hev",
+      "name": "HEV",
+      "unit": "",
+      "ref": ""
+    },
+    {
+      "test": "typhoidIgG",
+      "name": "Typhoid IgG",
+      "unit": "",
+      "ref": ""
+    },
+    {
+      "test": "typhoidIgM",
+      "name": "Typhoid IgM",
+      "unit": "",
+      "ref": ""
+    }
+  ],
+  "widal":[
+    {
+      "test": "sTyhiO",
+      "name": "S.Typhi 'o'",
+      "unit": "",
+      "ref": ""
+    },
+    {
+      "test": "sTyphiH",
+      "name": "S.Typhi 'H'",
+      "unit": "",
+      "ref": ""
+    },
+    {
+      "test": "sParatyhiAH",
+      "name": "S.paratyphi 'AH'",
+      "unit": "",
+      "ref": ""
+    },
+    {
+      "test": "sParatyhiBH",
+      "name": "S.paratyphi 'BH'",
+      "unit": "",
+      "ref": ""
+    },
+    {
+      "test": "hPylory",
+      "name": "Antigen For H-Pylory",
+      "unit": "",
+      "ref": ""
+    },
+    {
+      "test": "fungusTest",
+      "name": "Fungus Test",
+      "unit": "",
+      "ref": ""
+    }
+  ],
+  "urine": [
+    {
+      "test": "urineColour",
+      "name": "Colour",
+      "unit": "",
+      "ref": ""
+    },
+    {
+      "test": "urineTransparency",
+      "name": "Transparency",
+      "unit": "",
+      "ref": ""
+    },
+    {
+      "test": "urineAlbumin",
+      "name": "Albumin (Protein)",
+      "unit": "",
+      "ref": ""
+    },
+    {
+      "test": "urineSugar",
+      "name": "Sugar",
+      "unit": "",
+      "ref": ""
+    },
+    {
+      "test": "urineEpithelial",
+      "name": "Epithelial Cell",
+      "unit": "/HPF",
+      "ref": ""
+    },
+    {
+      "test": "urinePus",
+      "name": "Pus Cell",
+      "unit": "/HPF",
+      "ref": ""
+    },
+    {
+      "test": "urineRBC",
+      "name": "RBC",
+      "unit": "/HPF",
+      "ref": ""
+    },
+    {
+      "test": "urineCaOxalate",
+      "name": "Ca-Oxalate",
+      "unit": "/HPF",
+      "ref": ""
+    },
+    {
+      "test": "urineCrystals",
+      "name": "Crystals",
+      "unit": "",
+      "ref": ""
+    },
+    {
+      "test": "urineOthers",
+      "name": "Others",
+      "unit": "",
+      "ref": ""
+    },
+    {
+      "test": "urineHCG",
+      "name": "HCG (Pregnancy)",
+      "unit": "",
+      "ref": ""
+    }
   ]
 }
