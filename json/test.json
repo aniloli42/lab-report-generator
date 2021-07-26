@@ -446,7 +446,7 @@
   ],
   "widal":[
     {
-      "test": "sTyhiO",
+      "test": "sTyphiO",
       "name": "S.Typhi 'o'",
       "unit": "",
       "ref": ""
@@ -458,13 +458,13 @@
       "ref": ""
     },
     {
-      "test": "sParatyhiAH",
+      "test": "sParatyphiAH",
       "name": "S.paratyphi 'AH'",
       "unit": "",
       "ref": ""
     },
     {
-      "test": "sParatyhiBH",
+      "test": "sParatyphiBH",
       "name": "S.paratyphi 'BH'",
       "unit": "",
       "ref": ""

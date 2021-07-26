@@ -8,7 +8,7 @@
 /* Common Variables */
 :root {
   --back-color: #0b0044;
-  --btn-color: #1f0d79;
+  --btn-color: #211466;
   --btn-danger-color: rgb(182, 38, 38);
   --text-color: var(--back-color);
   --light: #fff;
@@ -250,13 +250,7 @@ article#patientDetails {
   justify-self: end;
 }
 
-/* bigger than 480 px */
-@media (min-width: 480px) {
-  /* Input label */
-  .input-group .input-div label {
-    min-width: 150px;
-  }
-}
+
 
 /* manage print btn */
 #printManageBtns {
@@ -326,6 +320,42 @@ article#patientDetails {
   color: #fff;
   background-color: red;
   font-weight: bold;
+}
+
+/* signatures */
+#signatures{
+  font-weight: bold;
+  width: 95%;
+  margin: 50px auto 20px;
+  text-align: center;
+}
+
+
+#signatures div{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+#signatures div p{
+  width: 200px;
+}
+
+.line{
+  display: block;
+  width: 200px;
+  height: 2px;
+  margin-bottom: 5px;
+  border-top: 2px dotted #000;
+}
+
+/* bigger than 480 px */
+@media (min-width: 480px) {
+  /* Input label */
+  .input-group .input-div label {
+    min-width: 150px;
+  }
 }
 
 /* bigger than 720px */

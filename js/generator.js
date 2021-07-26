@@ -486,112 +486,143 @@ const labTestHTML = {
             <div class="input-div">
               <label for="raFactor">RA factor</label>
               <div class="inputfield">
-                <input type="text" name="raFactor" id="raFactor" />
+                <input type="radio" name="raFactor" id="raFactor" value="" checked/>&nbsp;Not Measured&nbsp;
+                <input type="radio" name="raFactor" id="raFactor" value="Positive" />&nbsp;Positive&nbsp;
+                <input type="radio" name="raFactor" id="raFactor" value="Negative" />&nbsp;Negative&nbsp;
               </div>
             </div>
 
             <div class="input-div">
               <label for="crp">CRP</label>
               <div class="inputfield">
-                <input type="text" name="crp" id="crp" />
+              <input type="radio" name="crp" id="crp" value="" checked/>&nbsp;Not Measured&nbsp;
+                <input type="radio" name="crp" id="crp" value="Positive" />&nbsp;Positive&nbsp;
+                <input type="radio" name="crp" id="crp" value="Negative" />&nbsp;Negative&nbsp;
               </div>
             </div>
 
             <div class="input-div">
               <label for="asoTitre">ASOTitre</label>
               <div class="inputfield">
-                <input type="text" name="asoTitre" id="asoTitre" />
+              <input type="radio" name="asoTitre" id="asoTitre" value="" checked/>&nbsp;Not Measured&nbsp;
+              <input type="radio" name="asoTitre" id="asoTitre" value="Positive" />&nbsp;Positive&nbsp;
+              <input type="radio" name="asoTitre" id="asoTitre" value="Negative" />&nbsp;Negative&nbsp;
               </div>
             </div>
 
             <div class="input-div">
               <label for="hiv">HIV</label>
               <div class="inputfield">
-                <input type="text" name="hiv" id="hiv" />
+              <input type="radio" name="hiv" id="hiv" value="" checked/>&nbsp;Not Measured&nbsp;
+              <input type="radio" name="hiv" id="hiv" value="Positive" />&nbsp;Positive&nbsp;
+              <input type="radio" name="hiv" id="hiv" value="Negative" />&nbsp;Negative&nbsp;
               </div>
             </div>
 
             <div class="input-div">
               <label for="hav">HAV</label>
               <div class="inputfield">
-                <input type="text" name="hav" id="hav" />
+              <input type="radio" name="hav" id="hav" value="" checked/>&nbsp;Not Measured&nbsp;
+              <input type="radio" name="hav" id="hav" value="Positive" />&nbsp;Positive&nbsp;
+              <input type="radio" name="hav" id="hav" value="Negative" />&nbsp;Negative&nbsp;
               </div>
             </div>
 
             <div class="input-div">
               <label for="hbSag">HBsAg</label>
               <div class="inputfield">
-                <input type="text" name="hbSag" id="hbSag" />
+              <input type="radio" name="hbSag" id="hbSag" value="" checked/>&nbsp;Not Measured&nbsp;
+              <input type="radio" name="hbSag" id="hbSag" value="Positive" />&nbsp;Positive&nbsp;
+              <input type="radio" name="hbSag" id="hbSag" value="Negative" />&nbsp;Negative&nbsp;
               </div>
             </div>
 
             <div class="input-div">
               <label for="vdrlRpr">VDRL/RPR</label>
               <div class="inputfield">
-                <input type="text" name="vdrlRpr" id="vdrlRpr" />
+              <input type="radio" name="vdrlRpr" id="vdrlRpr" value="" checked/>&nbsp;Not Measured&nbsp;
+              <input type="radio" name="vdrlRpr" id="vdrlRpr" value="Positive" />&nbsp;Positive&nbsp;
+              <input type="radio" name="vdrlRpr" id="vdrlRpr" value="Negative" />&nbsp;Negative&nbsp;
               </div>
             </div>
 
             <div class="input-div">
               <label for="tpha">TPHA</label>
               <div class="inputfield">
-                <input type="text" name="tpha" id="tpha" />
+              <input type="radio" name="tpha" id="tpha" value="" checked/>&nbsp;Not Measured&nbsp;
+              <input type="radio" name="tpha" id="tpha" value="Positive" />&nbsp;Positive&nbsp;
+              <input type="radio" name="tpha" id="tpha" value="Negative" />&nbsp;Negative&nbsp;
               </div>
             </div>
 
             <div class="input-div">
               <label for="dengue">Dengue Igm/IgG</label>
               <div class="inputfield">
-                <input type="text" name="dengue" id="dengue" />
+              <input type="radio" name="dengue" id="dengue" value="" checked/>&nbsp;Not Measured&nbsp;
+              <input type="radio" name="dengue" id="dengue" value="Positive" />&nbsp;Positive&nbsp;
+              <input type="radio" name="dengue" id="dengue" value="Negative" />&nbsp;Negative&nbsp;
               </div>
             </div>
 
             <div class="input-div">
               <label for="troponinI">Troponin I</label>
               <div class="inputfield">
-                <input type="text" name="troponinI" id="troponinI" />
+              <input type="radio" name="troponinI" id="troponinI" value="" checked/>&nbsp;Not Measured&nbsp;
+              <input type="radio" name="troponinI" id="troponinI" value="Positive" />&nbsp;Positive&nbsp;
+              <input type="radio" name="troponinI" id="troponinI" value="Negative" />&nbsp;Negative&nbsp;
               </div>
             </div>
 
             <div class="input-div">
               <label for="tbCard">T.B. card Igm/IgG</label>
               <div class="inputfield">
-                <input type="text" name="tbCard" id="tbCard" />
+              <input type="radio" name="tbCard" id="tbCard" value="" checked/>&nbsp;Not Measured&nbsp;
+              <input type="radio" name="tbCard" id="tbCard" value="Positive" />&nbsp;Positive&nbsp;
+              <input type="radio" name="tbCard" id="tbCard" value="Negative" />&nbsp;Negative&nbsp;
               </div>
             </div>
 
             <div class="input-div">
               <label for="hPyloriIgG">H-Pylori/IgG</label>
               <div class="inputfield">
-                <input type="text" name="hPyloriIgG" id="hPyloriIgG" />
+              <input type="radio" name="hPyloriIgG" id="hPyloriIgG" value="" checked/>&nbsp;Not Measured&nbsp;
+              <input type="radio" name="hPyloriIgG" id="hPyloriIgG" value="Positive" />&nbsp;Positive&nbsp;
+              <input type="radio" name="hPyloriIgG" id="hPyloriIgG" value="Negative" />&nbsp;Negative&nbsp;
               </div>
             </div>
 
             <div class="input-div">
               <label for="hPyloriIgm">H-Pylori/Igm</label>
               <div class="inputfield">
-                <input type="text" name="hPyloriIgm" id="hPyloriIgm" />
+              <input type="radio" name="hPyloriIgm" id="hPyloriIgm" value="" checked/>&nbsp;Not Measured&nbsp;
+              <input type="radio" name="hPyloriIgm" id="hPyloriIgm" value="Positive" />&nbsp;Positive&nbsp;
+              <input type="radio" name="hPyloriIgm" id="hPyloriIgm" value="Negative" />&nbsp;Negative&nbsp;
               </div>
             </div>
 
             <div class="input-div">
               <label for="hev">HEV</label>
               <div class="inputfield">
-                <input type="text" name="hev" id="hev" />
-              </div>
+              <input type="radio" name="hev" id="hev" value="" checked/>&nbsp;Not Measured&nbsp;
+              <input type="radio" name="hev" id="hev" value="Positive" />&nbsp;Positive&nbsp;
+              <input type="radio" name="hev" id="hev" value="Negative" />&nbsp;Negative&nbsp;
             </div>
 
             <div class="input-div">
               <label for="typhoidIgG">Typhoid IgG</label>
               <div class="inputfield">
-                <input type="text" name="typhoidIgG" id="typhoidIgG" />
+              <input type="radio" name="typhoidIgG" id="typhoidIgG" value="" checked/>&nbsp;Not Measured&nbsp;
+              <input type="radio" name="typhoidIgG" id="typhoidIgG" value="Positive" />&nbsp;Positive&nbsp;
+              <input type="radio" name="typhoidIgG" id="typhoidIgG" value="Negative" />&nbsp;Negative&nbsp;
               </div>
             </div>
 
             <div class="input-div">
               <label for="typhoidIgm">Typhoid Igm</label>
               <div class="inputfield">
-                <input type="text" name="typhoidIgm" id="typhoidIgm" />
+              <input type="radio" name="typhoidIgm" id="typhoidIgm" value="" checked/>&nbsp;Not Measured&nbsp;
+              <input type="radio" name="typhoidIgm" id="typhoidIgm" value="Positive" />&nbsp;Positive&nbsp;
+              <input type="radio" name="typhoidIgm" id="typhoidIgm" value="Negative" />&nbsp;Negative&nbsp;
               </div>
             </div>
           </div>`,
@@ -599,44 +630,58 @@ const labTestHTML = {
             <div class="input-title">WIDAL TEST</div>
 
             <div class="input-div">
-              <label for="sTyhiO">S.Typhi 'O'</label>
+              <label for="sTyphiO">S.Typhi 'O'</label>
               <div class="inputfield">
-                <input type="text" name="sTyhiO" id="sTyhiO" />
+              <input type="radio" name="sTyphiO" id="sTyphiO" value="" checked/>&nbsp;Not Measured&nbsp;
+                <input type="radio" name="sTyphiO" id="sTyphiO" value="Positive" />&nbsp;Positive&nbsp;
+                <input type="radio" name="sTyphiO" id="sTyphiO" value="Negative" />&nbsp;Negative&nbsp;
               </div>
             </div>
 
             <div class="input-div">
-              <label for="sTyhiH">S.Typhi 'H'</label>
+              <label for="sTyphiH">S.Typhi 'H'</label>
               <div class="inputfield">
-                <input type="text" name="sTyhiH" id="sTyhiH" />
+                <input type="radio" name="sTyphiH" id="sTyphiH" value="" checked/>&nbsp;Not Measured&nbsp;
+                <input type="radio" name="sTyphiH" id="sTyphiH" value="Positive" />&nbsp;Positive&nbsp;
+                <input type="radio" name="sTyphiH" id="sTyphiH" value="Negative" />&nbsp;Negative&nbsp;
               </div>
             </div>
 
             <div class="input-div">
-              <label for="sParatyhiAH">S.paratyphi 'AH'</label>
+              <label for="sParatyphiAH">S.paratyphi 'AH'</label>
               <div class="inputfield">
-                <input type="text" name="sParatyhiAH" id="sParatyhiAH" />
+                <input type="radio" name="sParatyphiAH" id="sParatyphiAH" value="" checked/>&nbsp;Not Measured&nbsp;
+                <input type="radio" name="sParatyphiAH" id="sParatyphiAH" value="Positive" />&nbsp;Positive&nbsp;
+                <input type="radio" name="sParatyphiAH" id="sParatyphiAH" value="Negative" />&nbsp;Negative&nbsp;
               </div>
             </div>
 
             <div class="input-div">
-              <label for="sParatyhiBH">S.paratyphi 'BH'</label>
+              <label for="sParatyphiBH">S.paratyphi 'BH'</label>
               <div class="inputfield">
-                <input type="text" name="sParatyhiBH" id="sParatyhiBH" />
+
+                <input type="radio" name="sParatyphiBH" id="sParatyphiBH" value="" checked/>&nbsp;Not Measured&nbsp;
+                <input type="radio" name="sParatyphiBH" id="sParatyphiBH" value="Positive" />&nbsp;Positive&nbsp;
+                <input type="radio" name="sParatyphiBH" id="sParatyphiBH" value="Negative" />&nbsp;Negative&nbsp;
               </div>
             </div>
 
             <div class="input-div">
               <label for="hPylory">Antigen for H-Pylory</label>
               <div class="inputfield">
-                <input type="text" name="hPylory" id="hPylory" />
+              <input type="radio" name="hPylory" id="hPylory" value="" checked/>&nbsp;Not Measured&nbsp;
+              <input type="radio" name="hPylory" id="hPylory" value="Positive" />&nbsp;Positive&nbsp;
+              <input type="radio" name="hPylory" id="hPylory" value="Negative" />&nbsp;Negative&nbsp;
+
               </div>
             </div>
 
             <div class="input-div">
               <label for="fungusTest">Fungus Test</label>
               <div class="inputfield">
-                <input type="text" name="fungusTest" id="fungusTest" />
+                <input type="radio" name="fungusTest" id="fungusTest" value="" checked/>&nbsp;Not Measured&nbsp;
+                <input type="radio" name="fungusTest" id="fungusTest" value="Positive" />&nbsp;Positive&nbsp;
+                <input type="radio" name="fungusTest" id="fungusTest" value="Negative" />&nbsp;Negative&nbsp;
               </div>
             </div>
 
@@ -779,6 +824,9 @@ const testInclude = document.getElementById("testInclude");
     }
     populateTestDiv(e.target.value);
   });
+
+  // if anyone check the test already from html file
+  if (checkedBox.checked) populateTestDiv(checkedBox.value);
 });
 
 // populate test div entry
@@ -935,6 +983,8 @@ function reportSectionCreator(testTitle, testDatas) {
     { name: "widal", visibleTitle: "WIDAL TEST" },
     { name: "urine", visibleTitle: "URINE ANALYSIS" },
   ];
+  let noUnitRefColumnTable = ["serology", "widal"];
+  console.log(testTitle);
   let showTitle = titleMaker.filter((title) => title.name == testTitle);
   let testHTML = `
         <section>
@@ -944,22 +994,35 @@ function reportSectionCreator(testTitle, testDatas) {
             <tr>
               <th>TEST</th>
               <th>RESULT</th>
+              `;
+  if (noUnitRefColumnTable.indexOf(testTitle) == -1) {
+    testHTML += `
               <th>UNIT</th>
               <th>REF.RANG</th>
+              `;
+  }
+  testHTML += `
             </tr>
             </thead>
             <tbody>`;
+
   testDatas.forEach((creatingData) => {
     testHTML += `
             <tr>
               <td>${creatingData.name}</td>
               <td>${creatingData.value}</td>
+              `;
+
+    if (noUnitRefColumnTable.indexOf(testTitle) == -1) {
+      testHTML += `
               <td>${
                 creatingData.unit == undefined ? "-" : creatingData.unit
               }</td>
               <td>${creatingData.ref == undefined ? "-" : creatingData.ref}</td>
-            </tr>        
+                   
    `;
+    }
+    testHTML += `</tr>`;
   });
   testHTML += `<tbody>
             </tbody>
