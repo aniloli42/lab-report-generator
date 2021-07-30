@@ -9,6 +9,7 @@
 :root {
   --back-color: #0b0044;
   --btn-color: #211466;
+  --unit: rgb(27, 170, 163);
   --btn-danger-color: rgb(182, 38, 38);
   --text-color: var(--back-color);
   --light: #fff;
@@ -143,20 +144,16 @@ header .back-btn {
 
 /* input-group > input-div */
 .input-group .input-div .unit {
-  background-color: var(--btn-color);
+  background-color: var(--unit);
+  margin: 0 1px;
   color: #fff;
-  width: auto;
-  height: 30px;
-  padding: 0 10px;
+  width: max-content;
+  max-width: 100%;
+  padding: 0 8px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-.input-group .input-div .inputfield #rbc + .unit {
-  font-size: 12px;
-}
-
 /* footer */
 .footer {
   align-self: end;

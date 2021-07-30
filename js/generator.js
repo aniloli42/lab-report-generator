@@ -10,13 +10,16 @@ const labTestHTML = {
                 <label for="wbc">WBC</label>
                 <div class="inputfield">
                     <input type="number" name="wbc" id="wbc" />
+                    <div class="unit">Ref.RANG: 4000 - 11000</div>
                     <div class="unit">/cu-mm</div>
+                    
                 </div>
                 </div>
                 <div class="input-div">
                 <label for="rbc">RBC</label>
                 <div class="inputfield">
-                    <input type="number" name="rbc" id="rbc" />
+                    <input type="number" name="rbc" id="rbc"/>
+                    <div class="unit">Ref.RANG: 4.5 - 6.5</div>
                     <div class="unit">Million cu-mm</div>
                 </div>
                 </div>
@@ -24,6 +27,7 @@ const labTestHTML = {
                 <label for="platelates">Platelates</label>
                 <div class="inputfield">
                     <input type="number" name="platelates" id="platelates" />
+                    <div class="unit">Ref.RANG: 150000 - 450000</div>
                     <div class="unit">/cu-mm</div>
                 </div>
                 </div>
@@ -31,6 +35,7 @@ const labTestHTML = {
                 <label for="hb">HB</label>
                 <div class="inputfield">
                     <input type="number" name="hb" id="hb" />
+                    <div class="unit">Ref.RANG: M 12.5-18 F 11.5-16.5</div>
                     <div class="unit">G/dl</div>
                 </div>
                 </div>
@@ -38,6 +43,7 @@ const labTestHTML = {
                 <label for="pcv">PCV</label>
                 <div class="inputfield">
                     <input type="number" name="pcv" id="pcv" />
+                    <div class="unit">Ref.RANG: 36%-54%</div>
                     <div class="unit">Fl</div>
                 </div>
                 </div>
@@ -70,6 +76,7 @@ const labTestHTML = {
               <label for="neutrophil">Neutrophil</label>
               <div class="inputfield">
                 <input type="number" name="neutrophil" id="neutrophil" />
+                <div class="unit">Ref.RANG: 40-70</div>
                 <div class="unit">%</div>
               </div>
             </div>
@@ -77,6 +84,7 @@ const labTestHTML = {
               <label for="lymphocyte">Lymphocyte</label>
               <div class="inputfield">
                 <input type="number" name="lymphocyte" id="lymphocyte" />
+                <div class="unit">Ref.RANG: 20-40</div>
                 <div class="unit">%</div>
               </div>
             </div>
@@ -84,6 +92,7 @@ const labTestHTML = {
               <label for="monocyte">Monocyte</label>
               <div class="inputfield">
                 <input type="number" name="monocyte" id="monocyte" />
+                <div class="unit">Ref.RANG: 2-10</div>
                 <div class="unit">%</div>
               </div>
             </div>
@@ -91,6 +100,7 @@ const labTestHTML = {
               <label for="eosinophil">Eosinophil</label>
               <div class="inputfield">
                 <input type="number" name="eosinophil" id="eosinophil" />
+                <div class="unit">Ref.RANG: 2-6</div>
                 <div class="unit">%</div>
               </div>
             </div>
@@ -98,6 +108,7 @@ const labTestHTML = {
               <label for="basophils">Basophils</label>
               <div class="inputfield">
                 <input type="number" name="basophils" id="basophils" />
+                <div class="unit">Ref.RANG: 0-1</div>
                 <div class="unit">%</div>
               </div>
             </div>
@@ -105,6 +116,7 @@ const labTestHTML = {
               <label for="reticulocyte">Reticulocyte</label>
               <div class="inputfield">
                 <input type="number" name="reticulocyte" id="reticulocyte" />
+                <div class="unit">Ref.RANG: 2-6</div>
                 <div class="unit">%</div>
               </div>
             </div>
@@ -112,6 +124,7 @@ const labTestHTML = {
               <label for="esr">ESR-(Wintrobes's)</label>
               <div class="inputfield">
                 <input type="number" name="esr" id="esr" />
+                <div class="unit">Ref.RANG: M 0-9 F 0-20</div>
                 <div class="unit">mm/1st hr</div>
               </div>
             </div>
@@ -119,6 +132,7 @@ const labTestHTML = {
               <label for="bt">BT</label>
               <div class="inputfield">
                 <input type="number" name="bt" id="bt" />
+                <div class="unit">Ref.RANG: 1-7</div>
                 <div class="unit">mm/min</div>
               </div>
             </div>
@@ -126,6 +140,7 @@ const labTestHTML = {
               <label for="ct">CT</label>
               <div class="inputfield">
                 <input type="number" name="ct" id="ct" />
+                <div class="unit">Ref.RANG: 5-10</div>
                 <div class="unit">mm/min</div>
               </div>
             </div>
@@ -156,6 +171,7 @@ const labTestHTML = {
               <label for="fasting">Fasting (F)</label>
               <div class="inputfield">
                 <input type="number" name="fasting" id="fasting" />
+                <div class="unit">Ref.RANG: 70-110</div>
                 <div class="unit">mg%</div>
               </div>
             </div>
@@ -164,6 +180,7 @@ const labTestHTML = {
               <label for="bloodSugar">Blood Sugar (PP)</label>
               <div class="inputfield">
                 <input type="number" name="bloodSugar" id="bloodSugar" />
+                <div class="unit">Ref.RANG: 70-140</div>
                 <div class="unit">mg%</div>
               </div>
             </div>
@@ -172,6 +189,7 @@ const labTestHTML = {
               <label for="random">Random (R)</label>
               <div class="inputfield">
                 <input type="number" name="random" id="random" />
+                <div class="unit">Ref.RANG: 70-140</div>
                 <div class="unit">mg%</div>
               </div>
             </div>
@@ -180,6 +198,7 @@ const labTestHTML = {
               <label for="bUrea">B-urea</label>
               <div class="inputfield">
                 <input type="number" name="bUrea" id="bUrea" />
+                <div class="unit">Ref.RANG: 15-45</div>
                 <div class="unit">mg%</div>
               </div>
             </div>
@@ -188,6 +207,7 @@ const labTestHTML = {
               <label for="sCreatinine">S-creatinine</label>
               <div class="inputfield">
                 <input type="number" name="sCreatinine" id="sCreatinine" />
+                <div class="unit">Ref.RANG: 0.4-1.4</div>
                 <div class="unit">mg%</div>
               </div>
             </div>
@@ -196,6 +216,7 @@ const labTestHTML = {
               <label for="uricAcid">Uric Acid</label>
               <div class="inputfield">
                 <input type="number" name="uricAcid" id="uricAcid" />
+                <div class="unit">Ref.RANG: M 2-7 F 2-6</div>
                 <div class="unit">mg%</div>
               </div>
             </div>
@@ -208,6 +229,7 @@ const labTestHTML = {
                   name="bilirubinTotal"
                   id="bilirubinTotal"
                 />
+                <div class="unit">Ref.RANG: 0.4-1.2</div>
                 <div class="unit">mg%</div>
               </div>
             </div>
@@ -220,6 +242,7 @@ const labTestHTML = {
                   name="bilirubinDirect"
                   id="bilirubinDirect"
                 />
+                <div class="unit">Ref.RANG: 0.0-0.4</div>
                 <div class="unit">mg%</div>
               </div>
             </div>
@@ -228,6 +251,7 @@ const labTestHTML = {
               <label for="alp">ALP</label>
               <div class="inputfield">
                 <input type="number" name="alp" id="alp" />
+                <div class="unit">Ref.RANG: 80-310</div>
                 <div class="unit">IU/L</div>
               </div>
             </div>
@@ -236,6 +260,7 @@ const labTestHTML = {
               <label for="sgpt">SGPT</label>
               <div class="inputfield">
                 <input type="number" name="sgpt" id="sgpt" />
+                <div class="unit">Ref.RANG: 5-49</div>
                 <div class="unit">IU/L</div>
               </div>
             </div>
@@ -244,6 +269,7 @@ const labTestHTML = {
               <label for="sgot">SGOT</label>
               <div class="inputfield">
                 <input type="number" name="sgot" id="sgot" />
+                <div class="unit">Ref.RANG: 5-45</div>
                 <div class="unit">IU/L</div>
               </div>
             </div>
@@ -252,6 +278,7 @@ const labTestHTML = {
               <label for="totalProtein">Total Protein</label>
               <div class="inputfield">
                 <input type="number" name="totalProtein" id="totalProtein" />
+                <div class="unit">Ref.RANG: 6-8</div>
                 <div class="unit">Mg%</div>
               </div>
             </div>
@@ -260,6 +287,7 @@ const labTestHTML = {
               <label for="albumin">Albumin</label>
               <div class="inputfield">
                 <input type="number" name="albumin" id="albumin" />
+                <div class="unit">Ref.RANG: 3.5-5</div>
                 <div class="unit">Mg%</div>
               </div>
             </div>
@@ -272,6 +300,7 @@ const labTestHTML = {
                   name="totalCholestrol"
                   id="totalCholestrol"
                 />
+                <div class="unit">Ref.RANG: 150-250</div>
                 <div class="unit">Mg%</div>
               </div>
             </div>
@@ -280,6 +309,7 @@ const labTestHTML = {
               <label for="triglycerides">Triglycerides</label>
               <div class="inputfield">
                 <input type="number" name="triglycerides" id="triglycerides" />
+                <div class="unit">Ref.RANG: 30-170</div>
                 <div class="unit">Mg%</div>
               </div>
             </div>
@@ -292,6 +322,7 @@ const labTestHTML = {
                   name="hdlCholesterol"
                   id="hdlCholesterol"
                 />
+                <div class="unit">Ref.RANG: >35</div>
                 <div class="unit">Mg%</div>
               </div>
             </div>
@@ -304,6 +335,7 @@ const labTestHTML = {
                   name="ldlCholesterol"
                   id="ldlCholesterol"
                 />
+                <div class="unit">Ref.RANG: <150 </div>
                 <div class="unit">Mg%</div>
               </div>
             </div>
@@ -312,6 +344,7 @@ const labTestHTML = {
               <label for="vldl">VLDL</label>
               <div class="inputfield">
                 <input type="number" name="vldl" id="vldl" />
+                <div class="unit">Ref.RANG: <40</div>
                 <div class="unit">Mg%</div>
               </div>
             </div>
@@ -320,6 +353,7 @@ const labTestHTML = {
               <label for="ldh">LDH</label>
               <div class="inputfield">
                 <input type="number" name="ldh" id="ldh" />
+                <div class="unit">Ref.RANG: 225-450</div>
                 <div class="unit">Mg%</div>
               </div>
             </div>
@@ -328,6 +362,7 @@ const labTestHTML = {
               <label for="cpk">CPK</label>
               <div class="inputfield">
                 <input type="number" name="cpk" id="cpk" />
+                <div class="unit">Ref.RANG: <190</div>
                 <div class="unit">IU/L</div>
               </div>
             </div>
@@ -336,6 +371,7 @@ const labTestHTML = {
               <label for="sodium">Na+(Sodium)</label>
               <div class="inputfield">
                 <input type="number" name="sodium" id="sodium" />
+                <div class="unit">Ref.RANG: 135-155</div>
                 <div class="unit">MEq/L</div>
               </div>
             </div>
@@ -344,6 +380,7 @@ const labTestHTML = {
               <label for="potassium">K+(Potassium)</label>
               <div class="inputfield">
                 <input type="number" name="potassium" id="potassium" />
+                <div class="unit">Ref.RANG: 3.5-5.5</div>
                 <div class="unit">MEq/L</div>
               </div>
             </div>
@@ -352,6 +389,7 @@ const labTestHTML = {
               <label for="serumAmylase">Serum Amylase</label>
               <div class="inputfield">
                 <input type="number" name="serumAmylase" id="serumAmylase" />
+                <div class="unit">Ref.RANG: <200</div>
                 <div class="unit">IU/L</div>
               </div>
             </div>
@@ -360,6 +398,7 @@ const labTestHTML = {
               <label for="calcium">Calcium</label>
               <div class="inputfield">
                 <input type="number" name="calcium" id="calcium" />
+                <div class="unit">Ref.RANG: 8.7-10.4</div>
                 <div class="unit">Mg%</div>
               </div>
             </div>
@@ -384,9 +423,10 @@ const labTestHTML = {
             </div>
 
             <div class="input-div">
-              <label for="valume">Valume</label>
+              <label for="volume">Volume</label>
               <div class="inputfield">
-                <input type="number" name="valume" id="valume" />
+                <input type="number" name="volume" id="volume" />
+                <div class="unit">Ref.RANG: 3-5</div>
                 <div class="unit">ml</div>
               </div>
             </div>
@@ -420,6 +460,7 @@ const labTestHTML = {
               <label for="motile">Motile</label>
               <div class="inputfield">
                 <input type="number" name="motile" id="motile" />
+                <div class="unit">Ref.RANG: 60-80</div>
                 <div class="unit">%</div>
               </div>
             </div>
@@ -428,6 +469,7 @@ const labTestHTML = {
               <label for="nonMotile">Non Motile</label>
               <div class="inputfield">
                 <input type="number" name="nonMotile" id="nonMotile" />
+                <div class="unit">Ref.RANG: 20</div>
                 <div class="unit">%</div>
               </div>
             </div>
@@ -447,6 +489,7 @@ const labTestHTML = {
               <label for="totalCount">Total Count</label>
               <div class="inputfield">
                 <input type="number" name="totalCount" id="totalCount" />
+                <div class="unit">Ref.RANG: 60-150</div>
                 <div class="unit">million/ml</div>
               </div>
             </div>
