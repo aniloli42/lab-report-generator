@@ -28,7 +28,7 @@ const nextPatient = document.querySelector("#nextPatient");
 const savePrint = document.querySelector("#savePrint");
 let getDirectPrintData = "";
 let displayDate = "";
-let SavingReport = [];
+let successSaving = document.querySelector("#successSaving");
 
 // Code Of Adding the test as per checkbox selected
 const labTestHTML = {
@@ -1172,15 +1172,26 @@ savePrint.addEventListener("click", () => {
 
 function createAndSaveReport() {
   localStorage.setItem("savedReports", JSON.stringify([formInputs]));
+  saveStatus("Successfully Report Saved!!!");
 }
 
 function updateReport(savedReports, index) {
   savedReports[index] = formInputs;
   localStorage.setItem("savedReports", JSON.stringify(savedReports));
+  saveStatus("Successfully Updated Saved!!!");
 }
 
 function saveReport(savedReports) {
   savedReports = [...savedReports, formInputs];
 
   localStorage.setItem("savedReports", JSON.stringify(savedReports));
+  saveStatus("Successfully Report Saved!!!");
+}
+
+function saveStatus(message) {
+  successSaving.style.display = "block";
+  successSaving.innerText = message;
+  setTimeout(() => {
+    successSaving.style.display = "none";
+  }, 2000);
 }
