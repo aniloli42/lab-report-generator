@@ -258,10 +258,6 @@ article#patientDetails {
   margin: 10px auto;
 }
 
-#printManageBtns #nextPatient {
-  grid-column: 1/3;
-}
-
 #print button {
   width: 100%;
   height: 40px;

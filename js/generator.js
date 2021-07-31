@@ -2,6 +2,34 @@ import { validate } from "./check.js";
 
 validate();
 
+if (localStorage.getItem("directPrint") == null) {
+  location.replace("./dashboard.html");
+}
+
+// universal variables
+const backDashboardBtn = document.getElementById("backBTN");
+const errorMessageDiv = document.getElementById("errorDiv");
+const containerDiv = document.querySelector(".container");
+const showPrintDiv = document.getElementById("print");
+const showPatientName = document.getElementById("showPatientName");
+const showPatientAge = document.getElementById("showPatientAge");
+const showPatientSex = document.getElementById("showPatientSex");
+const showDate = document.getElementById("showDate");
+const showDoctorName = document.getElementById("showDoctorName");
+const showLabNo = document.getElementById("showLabNo");
+const checkTestHandler = document.querySelectorAll("[data-checked]");
+const testInclude = document.getElementById("testInclude");
+let formInputs = [];
+const mainForm = document.getElementById("mainForm");
+const showReportsDiv = document.getElementById("showReports");
+const printEdit = document.querySelector("#printEdit");
+const printPageBtn = document.getElementById("printPage");
+const nextPatient = document.querySelector("#nextPatient");
+const savePrint = document.querySelector("#savePrint");
+let getDirectPrintData = "";
+let displayDate = "";
+let SavingReport = [];
+
 // Code Of Adding the test as per checkbox selected
 const labTestHTML = {
   haematology: `<div class="input-group" id="haematology">
@@ -839,15 +867,27 @@ if (sessionStorage.getItem("reportData") != "") {
   sessionStorage.removeItem("reportData");
 }
 
-/* New Codes */
+if (localStorage.getItem("directPrint") != "") {
+  getDirectPrintData = JSON.parse(localStorage.getItem("directPrint"));
+  if (getDirectPrintData.source == 1) {
+    printEdit.style.display = "none";
+    savePrint.style.display = "none";
+    nextPatient.style.display = "none";
+    printPageBtn.style.gridColumn = "1/3";
 
-// universal variables
-const backDashboardBtn = document.getElementById("backBTN");
-const errorMessageDiv = document.getElementById("errorDiv");
-const containerDiv = document.querySelector(".container");
-
-// for print section
-const showPrintDiv = document.getElementById("print");
+    let printNumber;
+    if (localStorage.getItem("printNumber") != null) {
+      printNumber = localStorage.getItem("printNumber");
+    }
+    let getSavedReports = JSON.parse(localStorage.getItem("savedReports"));
+    console.log(getSavedReports[`${parseInt(printNumber)}`]);
+    getSavedReports[`${parseInt(printNumber)}`].forEach((tests) => {
+      formInputs.push(tests);
+    });
+    // debugger;
+    generatePrintReport();
+  }
+}
 
 // Back Button Implement
 backDashboardBtn.addEventListener("click", () => {
@@ -855,8 +895,6 @@ backDashboardBtn.addEventListener("click", () => {
 });
 
 //  fetch the checked data
-const checkTestHandler = document.querySelectorAll("[data-checked]");
-const testInclude = document.getElementById("testInclude");
 
 // track the which checkbox is checked
 [...checkTestHandler].some((checkedBox) => {
@@ -891,9 +929,6 @@ function removeUncheckedTest(testIdName) {
 }
 
 // fetch the form data
-let formInputs = [];
-const mainForm = document.getElementById("mainForm");
-
 mainForm.addEventListener("submit", (e) => {
   e.preventDefault();
   formInputs = [];
@@ -942,19 +977,13 @@ document.getElementById("resetBtn").addEventListener("click", () => {
 // generate print report
 function generatePrintReport() {
   showPrintDiv.style.display = "block";
+  containerDiv.style.display = "none";
   containerDiv.style.overflow = "hidden";
   customerDetailsPopulater(formInputs);
   reportPopulater(formInputs);
 }
 
 // customer Details
-const showPatientName = document.getElementById("showPatientName");
-const showPatientAge = document.getElementById("showPatientAge");
-const showPatientSex = document.getElementById("showPatientSex");
-const showDate = document.getElementById("showDate");
-const showDoctorName = document.getElementById("showDoctorName");
-const showLabNo = document.getElementById("showLabNo");
-
 function customerDetailsPopulater(customerDetailsArray) {
   customerDetailsArray.forEach((customerDetails) => {
     if (customerDetails.name == "patientName")
@@ -971,14 +1000,21 @@ function customerDetailsPopulater(customerDetailsArray) {
 
     if (customerDetails.name == "labNo")
       showLabNo.innerText = `Lab No: ${customerDetails.value}`;
+
+    if (customerDetails.name == "testDate")
+      showDate.innerText = `Date: ${customerDetails.value}`;
   });
 
   // showDate in report
-  let DateCreator = new Date();
-  showDate.innerText = `Date: ${DateCreator.getUTCFullYear()}-${
-    DateCreator.getUTCMonth() + 1
-  }-${DateCreator.getUTCDate()} AD`;
-  return;
+  if ((getDirectPrintData != "") & (getDirectPrintData.source == 0)) {
+    let DateCreator = new Date();
+    displayDate = `${DateCreator.getUTCFullYear()}-${
+      DateCreator.getUTCMonth() + 1
+    }-${DateCreator.getUTCDate()} AD`;
+    showDate.innerText = `Date: ${displayDate}`;
+    formInputs.push({ name: "testDate", value: displayDate });
+    return;
+  }
 }
 
 // Report Populator
@@ -1014,7 +1050,6 @@ async function testFetcher(testFetchName) {
 }
 
 // report Section Creator
-const showReportsDiv = document.getElementById("showReports");
 
 function reportSectionCreator(testTitle, testDatas) {
   let titleMaker = [
@@ -1027,7 +1062,6 @@ function reportSectionCreator(testTitle, testDatas) {
     { name: "urine", visibleTitle: "URINE ANALYSIS" },
   ];
   let noUnitRefColumnTable = ["serology", "widal"];
-  console.log(testTitle);
   let showTitle = titleMaker.filter((title) => title.name == testTitle);
   let testHTML = `
         <section>
@@ -1077,25 +1111,76 @@ function reportSectionCreator(testTitle, testDatas) {
 }
 
 // print Click handler
-const printPageBtn = document.getElementById("printPage");
 printPageBtn.addEventListener("click", () => print());
 
 // Edit the current details of patient
-const printEdit = document.querySelector("#printEdit");
-
 printEdit.addEventListener("click", () => {
   showPrintDiv.style.display = "none";
+  containerDiv.style.display = "grid";
   containerDiv.style.overflow = "unset";
   showReports.innerHTML = "";
 });
 
 // New Patient Print Available
-const nextPatient = document.querySelector("#nextPatient");
-
 nextPatient.addEventListener("click", () => {
   mainForm.reset();
   testInclude.innerHTML = "";
   showPrintDiv.style.display = "none";
   containerDiv.style.overflow = "unset";
+  containerDiv.style.display = "grid";
   showReports.innerHTML = "";
 });
+
+// Click on Save Report
+savePrint.addEventListener("click", () => {
+  let labNum = document.getElementById("labNo");
+  if (localStorage.getItem("savedReports") == null)
+    return createAndSaveReport();
+
+  let savedReports = JSON.parse(localStorage.getItem("savedReports"));
+
+  let loopExecutedBreak = 0;
+
+  savedReports.forEach((savedReport, index) => {
+    let findMatchLabTestNo = savedReport.find((tested) => {
+      return tested.name == "labNo";
+    });
+
+    if (
+      findMatchLabTestNo != undefined &&
+      findMatchLabTestNo != null &&
+      findMatchLabTestNo.value === labNum.value
+    ) {
+      updateReport(savedReports, index);
+      loopExecutedBreak = 1;
+      return;
+    }
+
+    if (
+      findMatchLabTestNo != undefined &&
+      findMatchLabTestNo != null &&
+      findMatchLabTestNo.value !== labNum.value
+    ) {
+      if (loopExecutedBreak == 0) {
+        saveReport(savedReports);
+        loopExecutedBreak = 1;
+        return;
+      }
+    }
+  });
+});
+
+function createAndSaveReport() {
+  localStorage.setItem("savedReports", JSON.stringify([formInputs]));
+}
+
+function updateReport(savedReports, index) {
+  savedReports[index] = formInputs;
+  localStorage.setItem("savedReports", JSON.stringify(savedReports));
+}
+
+function saveReport(savedReports) {
+  savedReports = [...savedReports, formInputs];
+
+  localStorage.setItem("savedReports", JSON.stringify(savedReports));
+}

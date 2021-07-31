@@ -49,7 +49,7 @@
                 name="patientAge"
                 id="patientAge"
                 required
-                oninvalid="this.setCustomValidity('Age hanne bhulnu bhayo ta')"
+                oninvalid="this.setCustomValidity('Age kati bhayo ta')"
                 oninput="this.setCustomValidity('')"
               />
             </div>
@@ -65,7 +65,7 @@
                 name="doctorName"
                 id="doctorName"
                 required
-                oninvalid="this.setCustomValidity('Afai aaunu bhako ki Doctor le patako ho')"
+                oninvalid="this.setCustomValidity('Yo Lab test Kati Number Paxi Yo Bhako')"
                 oninput="this.setCustomValidity('')"
               />
             </div>
@@ -122,7 +122,6 @@
                 data-checked="semen"
                 name="checkTest"
                 value="semen"
-                checked
               />
               SEMEN ANALYSIS
             </label>
@@ -180,9 +179,10 @@
     <!-- print Report  -->
     <section id="print">
       <article id="printManageBtns">
-        <button id="printPage">Print</button>
         <button id="printEdit">Edit</button>
         <button id="nextPatient">Next Patient</button>
+        <button id="printPage">Print</button>
+        <button id="savePrint">Save</button>
       </article>
       <article id="contactDetails">
         <p id="pan">PAN NO. 605875386</p>
