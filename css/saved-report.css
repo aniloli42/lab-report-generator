@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    background-color: #ccc;
+}
+
+.brand {
+    font-weight: bold;
+    font-size: 1.1em;
+    text-transform: uppercase;
+}
+
+
+
+#backBTN {
+    padding: 8px 20px;
+    cursor: pointer;
+    font-weight: 480;
+}
+
+/* Search Person Div */
+.search-div {
+    padding: 10px 30px;
+}
+
+.search-div h2 {
+    font-weight: 450;
+    margin-bottom: 10px;
+}
+
+hr {
+    width: 96%;
+    margin: 0 auto;
+}
+
+#searchTest {
+    outline: none;
+    width: 100%;
+    padding: 5px 10px;
+    font-weight: bold;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+#searchTest::placeholder {
+    font-weight: normal;
+}
+
+/* reports */
+
+.reports {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    padding: 30px;
+    gap: 20px;
+}
+
+.report {
+    padding: 20px;
+    border: 1px solid rgb(0, 0, 0);
+    box-shadow: 1px 3px 10px #ccc;
+}
+
+.report h2 {
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.report .date {
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(145, 144, 144);
+}
+
+.report-btns {
+    display: flex;
+}
+
+.report button {
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(27, 151, 33);
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    transition: 250ms all;
+    cursor: pointer;
+}
+
+.report #removeTest {
+    background-color: rgb(218, 42, 42);
+    margin-left: 10px;
+}
+
+.report button:hover {
+    background-color: rgb(35, 177, 42);
+}
+
+.report #removeTest:hover {
+    background-color: rgb(240, 74, 74);
+}
+
+.report ul {
+    margin: 20px 0;
+    list-style-type: circle;
+}
+
+.report ul li {
+    margin-left: 20px;
+}
+
+@media (min-width: 1440px) {
+    .reports {
+        grid-template-columns: repeat(4, minmax(300px, auto));
+    }
+
+    .brand {
+        font-size: 1.5em;
+    }
+
+    #searchTest {
+        width: 500px;
+        padding: 5px 10px;
+        font-weight: bold;
+        font-size: 18px;
+    }
+}
