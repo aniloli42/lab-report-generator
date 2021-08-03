@@ -24,6 +24,7 @@ const mainForm = document.getElementById("mainForm");
 const showReportsDiv = document.getElementById("showReports");
 const printEdit = document.querySelector("#printEdit");
 const printPageBtn = document.getElementById("printPage");
+const backToSaved = document.getElementById("backToSaved");
 const nextPatient = document.querySelector("#nextPatient");
 const savePrint = document.querySelector("#savePrint");
 let getDirectPrintData = "";
@@ -873,7 +874,7 @@ if (localStorage.getItem("directPrint") != "") {
     printEdit.style.display = "none";
     savePrint.style.display = "none";
     nextPatient.style.display = "none";
-    printPageBtn.style.gridColumn = "1/3";
+    backToSaved.style.display = "block";
 
     let printNumber;
     if (localStorage.getItem("printNumber") != null) {
@@ -886,6 +887,10 @@ if (localStorage.getItem("directPrint") != "") {
     generatePrintReport();
   }
 }
+
+backToSaved.addEventListener("click", () => {
+  location.replace("./saved-report.html");
+});
 
 // Back Button Implement
 backDashboardBtn.addEventListener("click", () => {
@@ -1191,5 +1196,5 @@ function saveStatus(message) {
   successSaving.innerText = message;
   setTimeout(() => {
     successSaving.style.display = "none";
-  }, 2000);
+  }, 800);
 }

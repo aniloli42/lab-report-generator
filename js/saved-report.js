@@ -1,13 +1,8 @@
-import { validate, logout } from "./check.js";
-
-validate();
-
 // Variables
-
 const backBTN = document.getElementById("backBTN");
 const displayReportsDiv = document.getElementById("reportDisplay");
-const reportDiv = document.getElementsByClassName('report');
-const searchResult = document.getElementById('searchResult');
+const reportDiv = document.getElementsByClassName("report");
+const searchResult = document.getElementById("searchResult");
 
 // backBTN Function
 backBTN.addEventListener("click", () => {
@@ -19,11 +14,11 @@ displayReports();
 
 async function displayReports() {
   let savedReports = await getReports();
-  if (savedReports == null) {
-    displayReportsDiv.innerHTML = `<p class="error">No any reports saved yet!</p>`;
+  if (savedReports == null || savedReports == undefined) {
+    displayReportsDiv.innerHTML = `<p class="error">No any report saved yet!</p>`;
     return;
   }
-  
+
   displayReportsDiv.innerHTML = "";
 
   savedReports.forEach((saveReport, index) => {
@@ -32,11 +27,9 @@ async function displayReports() {
     let checkTest = saveReport.filter((name) => name.name == "checkTest");
     let testIndex = index;
 
-    populateDiv(patientName, testDate,checkTest, testIndex);
+    populateDiv(patientName, testDate, checkTest, testIndex);
   });
 }
-
-
 
 function getReports() {
   let getReports = localStorage.getItem("savedReports");
@@ -46,58 +39,73 @@ function getReports() {
 }
 
 function populateDiv(patientName, testDate, checkTest, testIndex) {
-  let testDiv = document.createElement("div");
+  let testDiv = "";
   let testsList = "";
-  checkTest.forEach(test=>{
-    testsList +=`<li>${test.value.toUpperCase()}</li>`;
-  })
+  checkTest.forEach((test) => {
+    testsList += `<li>${test.value.toUpperCase()}</li>`;
+  });
 
-  testDiv.classList.add("report");
-
-  testDiv.innerHTML = `
+  testDiv = `
+      <div class="report">
         <h2 class="patientNames">${patientName.value}</h2>
         <p class="date">${testDate.value}</p>
         <ul> Tests:
         ${testsList}
         </ul>
-        <div class="report-btns">
-          <button class="printTest">Print</button>
-          <button class="removeTest" data-test-id="${testIndex}">Remove</button>
+        <div class="report-btns" >
+          <button class="printTest" onclick="printReport(${testIndex})">Print</button>
+          <button class="removeTest" onclick="deleteReport(${testIndex})">Remove</button>
         </div>
+      </div>
 `;
 
-  displayReportsDiv.appendChild(testDiv);
+  displayReportsDiv.innerHTML += testDiv;
 }
 
-searchTest.addEventListener('input',(e)=>{
+searchTest.addEventListener("input", (e) => {
   let searchText = e.target.value.toLowerCase();
-  const patientNames = document.getElementsByClassName('patientNames');
-  
-  if(searchText=="" || searchText==null || searchText == undefined){
+  const patientNames = document.getElementsByClassName("patientNames");
+
+  if (searchText == "" || searchText == null || searchText == undefined) {
     searchResult.style.display = "none";
     displayReports();
   }
 
+  [...reportDiv].forEach((report) => {
+    let personName = report.children[0].innerText.toLowerCase();
 
+    if (personName.includes(searchText)) {
+      report.style.display = "initial";
+    }
 
- [...reportDiv].forEach(report=> {
+    if (!personName.includes(searchText)) {
+      report.style.display = "none";
+    }
 
-  let personName = report.children[0].innerText.toLowerCase();
-
-  if(personName.includes(searchText)){
-    report.style.display = "initial";
-  }
-
-  if(!personName.includes(searchText)){
-    report.style.display = "none";
-  }
-
-  
-
-
-  if(displayReportsDiv.offsetHeight == "0"){
-    searchResult.style.display = "block";
-  }
-
+    if (displayReportsDiv.offsetHeight == "0") {
+      searchResult.style.display = "block";
+    }
   });
-})
+});
+
+const printTestBtns = document.getElementsByClassName("printTest");
+const removeTest = document.getElementsByClassName("removeTest");
+
+// print Report on click
+function printReport(index) {
+  localStorage.setItem("printNumber", index);
+  location.assign("./generator.html");
+}
+
+// delete Report on click
+function deleteReport(index) {
+  let getDatas = getReports();
+  delete getDatas[index];
+
+  getDatas = getDatas.filter((data) => data != null);
+  console.log(getDatas.length, getDatas);
+  if (getDatas.length != 0)
+    localStorage.setItem("savedReports", JSON.stringify(getDatas));
+  if (getDatas.length == 0) localStorage.removeItem("savedReports");
+  displayReports();
+}
