@@ -9,13 +9,13 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px;
+    padding: 20px 30px;
     background-color: #ccc;
 }
 
 .brand {
     font-weight: bold;
-    font-size: 1.1em;
+    font-size: 1.5em;
     text-transform: uppercase;
 }
 
@@ -37,6 +37,12 @@ header {
     margin-bottom: 10px;
 }
 
+.errorSearch {
+    display: none;
+    margin: 5px 0;
+    color: red;
+}
+
 hr {
     width: 96%;
     margin: 0 auto;
@@ -56,24 +62,34 @@ hr {
 }
 
 /* reports */
+.reports-div {
+    padding: 10px 30px 20px;
+}
+
+.reports-div h2 {
+    margin-bottom: 20px;
+}
+
+.reports-div .error {
+    color: #666;
+}
 
 .reports {
     display: grid;
     grid-template-columns: repeat(1, auto);
-    padding: 30px;
     gap: 20px;
 }
 
 .report {
     padding: 20px;
     border: 1px solid rgb(0, 0, 0);
-    box-shadow: 1px 3px 10px #ccc;
+    box-shadow: -2px 2px 4px #ccc;
 }
 
 .report h2 {
     font-weight: 500;
     text-transform: uppercase;
-    margin-bottom: 5px;
+    margin-bottom: 2px;
 }
 
 .report .date {
@@ -89,7 +105,6 @@ hr {
 .report button {
     width: 100%;
     padding: 10px;
-    background-color: rgb(27, 151, 33);
     color: #fff;
     font-size: 18px;
     border: none;
@@ -97,26 +112,36 @@ hr {
     cursor: pointer;
 }
 
-.report #removeTest {
+.report .printTest {
+    background-color: rgb(27, 151, 33);
+}
+
+.report .removeTest {
     background-color: rgb(218, 42, 42);
     margin-left: 10px;
 }
 
-.report button:hover {
+.report .printTest:hover {
     background-color: rgb(35, 177, 42);
 }
 
-.report #removeTest:hover {
+.report .removeTest:hover {
     background-color: rgb(240, 74, 74);
 }
 
 .report ul {
-    margin: 20px 0;
+    margin: 15px 0 20px;
     list-style-type: circle;
 }
 
 .report ul li {
     margin-left: 20px;
+}
+
+@media (min-width:700px) {
+    .reports {
+        grid-template-columns: repeat(2, minmax(300px, auto));
+    }
 }
 
 @media (min-width: 1440px) {
@@ -125,7 +150,7 @@ hr {
     }
 
     .brand {
-        font-size: 1.5em;
+        font-size: 1.8em;
     }
 
     #searchTest {

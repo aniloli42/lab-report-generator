@@ -880,11 +880,9 @@ if (localStorage.getItem("directPrint") != "") {
       printNumber = localStorage.getItem("printNumber");
     }
     let getSavedReports = JSON.parse(localStorage.getItem("savedReports"));
-    console.log(getSavedReports[`${parseInt(printNumber)}`]);
     getSavedReports[`${parseInt(printNumber)}`].forEach((tests) => {
       formInputs.push(tests);
     });
-    // debugger;
     generatePrintReport();
   }
 }
