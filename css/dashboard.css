@@ -5,6 +5,8 @@
   --dark: #0a1031;
   --semidark: #21314a;
   --lightdark: #354154;
+  --header-color:#ccc;
+  --header-brand-text: var(--black);
 }
 
 * {
@@ -13,11 +15,6 @@
   box-sizing: border-box;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-
-body {
-  background-color: var(--lightdark);
-}
-
 /* 
 This Mobile first Design Approach
 */
@@ -32,47 +29,44 @@ This Mobile first Design Approach
 
 /* header */
 header {
-  background-color: var(--dark);
+  background-color: var(--header-color);
   display: grid;
   justify-items: space-between;
   align-self: start;
   grid-template-areas: "brand logout";
-  padding: 10px 20px;
+  padding: 20px;
 }
 
 /* brand */
-header .brand h1 {
-  color: var(--white);
+header .brand {
   grid-area: brand;
-  font-size: 22px;
+  align-self: center;
+}
+
+header .brand h1 {
+  color: var(--header-brand-text);
+  text-transform: uppercase;
+  font-size: 1.3em;
+  font-weight: bold;
 }
 
 /* logout */
 header .logout {
   grid-area: logout;
   justify-self: end;
-  align-self: start;
-  color: var(--light);
-  display: flex;
-  gap: 5px;
-  align-items: center;
-  border: 2px solid var(--light);
-  padding: 5px;
-  border-radius: 10px;
+  align-self: center;
+  color: var(--black);
+  background-color: #aaa;
+  padding: 10px 15px;
+  border-radius: 4px;
   cursor: pointer;
 }
 
 header .logout:hover {
-  background-color: var(--lightdark);
-}
-
-.logout img {
-  width: 18px;
-  height: 18px;
+  background-color: #bbb;
 }
 
 .logout p {
-  display: none;
   text-transform: uppercase;
   font-weight: bold;
   user-select: none;
@@ -90,6 +84,7 @@ header .logout:hover {
   place-items: center;
   align-self: flex-start;
   gap: 10px;
+  padding: 10px 20px;
   justify-self: center;
 }
 
@@ -106,16 +101,15 @@ header .logout:hover {
 /* btn-div */
 
 .btn-div {
-  width: 90%;
-  max-height: 300px;
-  max-width: 400px;
-  background-color: var(--semidark);
+  width: 100%;
+  min-height: 200px;
+  background-color: rgb(114, 88, 88);
   display: grid;
   gap: 20px;
   place-items: center;
   cursor: pointer;
   user-select: none;
-  padding: 20px;
+  padding: 30px;
 }
 
 .btn-div img {
@@ -124,13 +118,13 @@ header .logout:hover {
 }
 
 .btn-div:hover {
-  background-color: var(--dark);
+  background-color: rgb(78, 55, 55);
   color: var(--white);
 }
 
 .btn-div p {
   color: var(--light);
-  font-size: 18px;
+  font-size: 1.1em;
   user-select: none;
   text-align: center;
 }
@@ -138,13 +132,17 @@ header .logout:hover {
 /* footer */
 .footer {
   align-self: end;
-  background-color: var(--dark);
+  background-color: var(--header-color);
   padding: 15px 0px;
   text-align: center;
-  color: var(--white);
+  color: var(--header-brand-text);
 }
 
 @media (min-width: 576px) {
+  header .brand h1 {
+    font-size: 1.5em;
+  }
+
   .main-section {
     grid-template-areas: "generator saved";
   }
@@ -152,12 +150,6 @@ header .logout:hover {
   .logout p {
     display: inline-block;
   }
-
-  .btn-div {
-    min-width: 200px;
-    height: 300px;
-  }
-
   /* Generator */
   .main-section #generatorDiv {
     grid-area: generator;
@@ -171,14 +163,24 @@ header .logout:hover {
   }
 }
 
+@media (min-width: 700px) {
+  .btn-div {
+    min-width: 300px;
+  }
+}
+
 @media (min-width: 980px) {
+header .brand h1 {
+  font-size: 1.7em;
+}
+
+
+
+.main-section {
+  justify-content: start;
+}
+
   .btn-div img {
     --min-height: 22em;
-  }
-
-  .btn-div {
-    max-width: 500px;
-    width: 400px;
-    height: 300px;
   }
 }

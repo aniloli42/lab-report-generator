@@ -1,3 +1,7 @@
+:root {
+    --header-color: #ccc;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -10,7 +14,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px 30px;
-    background-color: #ccc;
+    background-color: var(--header-color);
 }
 
 .brand {

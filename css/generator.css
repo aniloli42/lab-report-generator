@@ -31,29 +31,33 @@ body {
 /* header */
 header {
   align-self: start;
-  background-color: var(--back-color);
+  background-color: #ccc;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   align-content: center;
   justify-content: space-between;
   gap: 10px;
-  padding: 10px 15px;
+  padding: 20px;
   user-select: none;
 }
 
 header .brand h1 {
-  font-size: 20px;
-  color: var(--light);
+  font-size: 1.4em;
+  text-transform: uppercase;
+  color: var(--black);
 }
 
 /* Back Button */
-header .back-btn {
-  background-color: var(--btn-color);
-  color: #fff;
-  padding: 10px 20px;
+.back-btn {
+  border: 1px solid;
+  padding: 5px 30px;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.back-btn:hover {
+  background-color: #acc;
 }
 
 /* Grid Container */
@@ -140,16 +144,18 @@ header .back-btn {
 /* input-group > form > input-div */
 .input-group .input-div .inputfield {
   display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 /* input-group > input-div */
 .input-group .input-div .unit {
   background-color: var(--unit);
-  margin: 0 1px;
+  margin: 1px 2px;
   color: #fff;
   width: max-content;
   max-width: 100%;
-  padding: 0 8px;
+  padding: 3px 8px;
   display: flex;
   justify-content: center;
   align-items: center;
