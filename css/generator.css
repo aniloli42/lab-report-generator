@@ -259,6 +259,13 @@ article#patientDetails {
   justify-self: end;
 }
 
+#showReports section table .tdSubTitle {
+  border: none;
+  text-align: left;
+  font-weight: bold;
+  padding-left: 10px;
+}
+
 
 
 /* manage print btn */
@@ -335,8 +342,9 @@ article#patientDetails {
 #signatures{
   font-weight: bold;
   width: 95%;
-  margin: 50px auto 20px;
+  margin: 20px auto 20px;
   text-align: center;
+  padding: 20px;
 }
 
 

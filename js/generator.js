@@ -440,14 +440,14 @@ const labTestHTML = {
             <div class="input-div">
               <label for="investigation">Investigation</label>
               <div class="inputfield">
-                <div class="unit">Normal</div>
+              <input type="text" name="investigation" id="investigation" />
               </div>
             </div>
 
             <div class="input-div">
               <label for="collectionTime">Collection Time</label>
               <div class="inputfield">
-                <input type="time" name="collectionTime" id="collectionTime" />
+                <input type="text" name="collectionTime" id="collectionTime" />
               </div>
             </div>
 
@@ -478,7 +478,7 @@ const labTestHTML = {
               <label for="examinationTime">Examination Time</label>
               <div class="inputfield">
                 <input
-                  type="time"
+                  type="text"
                   name="examinationTime"
                   id="examinationTime"
                 />
@@ -1055,6 +1055,9 @@ async function testFetcher(testFetchName) {
 // report Section Creator
 
 function reportSectionCreator(testTitle, testDatas) {
+  let printedPhysicalTitle = false;
+  let printedChemicalTitle = false;
+  let printedMicroTitle = false;
   let titleMaker = [
     { name: "haematology", visibleTitle: "HAEMATOLOGY TEST" },
     { name: "differential", visibleTitle: "DIFFERENTIAL COUNT" },
@@ -1064,7 +1067,7 @@ function reportSectionCreator(testTitle, testDatas) {
     { name: "widal", visibleTitle: "WIDAL TEST" },
     { name: "urine", visibleTitle: "URINE ANALYSIS" },
   ];
-  let noUnitRefColumnTable = ["serology", "widal"];
+  let noUnitRefColumnTable = ["serology", "widal", "urine"];
   let showTitle = titleMaker.filter((title) => title.name == testTitle);
   let testHTML = `
         <section>
@@ -1075,25 +1078,85 @@ function reportSectionCreator(testTitle, testDatas) {
               <th>TEST</th>
               <th>RESULT</th>
               `;
-  if (noUnitRefColumnTable.indexOf(testTitle) == -1) {
+
+  if (testTitle == "urine") {
+    testHTML += `
+              <th>UNIT</th>`;
+  } else if (noUnitRefColumnTable.indexOf(testTitle) == -1) {
     testHTML += `
               <th>UNIT</th>
               <th>REF.RANG</th>
               `;
   }
+
   testHTML += `
             </tr>
             </thead>
             <tbody>`;
 
   testDatas.forEach((creatingData) => {
-    testHTML += `
+    if (
+      testTitle == "urine" &&
+      (creatingData.test == "urineColour" ||
+        creatingData.test == "urineTransparency") &&
+      printedPhysicalTitle == false
+    ) {
+      testHTML += `
+        <tr>
+        <td colspan="4" class="tdSubTitle">PHYSICAL EXAMINATION</td>
+        </tr>
+        <tr>
+              <td>${creatingData.name}</td>
+              <td>${creatingData.value}</td>
+        `;
+      printedPhysicalTitle = true;
+    } else if (
+      testTitle == "urine" &&
+      (creatingData.test == "urineAlbumin" ||
+        creatingData.test == "urineSugar") &&
+      printedChemicalTitle == false
+    ) {
+      testHTML += `
+        <tr>
+        <td colspan="4" class="tdSubTitle">CHEMICAL EXAMINATION</td>
+        </tr>
+        <tr>
+              <td>${creatingData.name}</td>
+              <td>${creatingData.value}</td>
+        `;
+      printedChemicalTitle = true;
+    } else if (
+      testTitle == "urine" &&
+      (creatingData.test == "urineEpithelial" ||
+        creatingData.test == "urinePus" ||
+        creatingData.test == "urineRBC" ||
+        creatingData.test == "urineCaOxalate" ||
+        creatingData.test == "urineCrystals" ||
+        creatingData.test == "urineOthers" ||
+        creatingData.test == "urineHCG") &&
+      printedMicroTitle == false
+    ) {
+      testHTML += `
+      <tr>
+      <td colspan="4" class="tdSubTitle">MICROSCOPIC EXAMINATION</td>
+      </tr>
+      <tr>
+            <td>${creatingData.name}</td>
+            <td>${creatingData.value}</td>
+      `;
+      printedMicroTitle = true;
+    } else {
+      testHTML += `
             <tr>
               <td>${creatingData.name}</td>
               <td>${creatingData.value}</td>
               `;
+    }
 
-    if (noUnitRefColumnTable.indexOf(testTitle) == -1) {
+    if (testTitle == "urine") {
+      testHTML += `
+      <td>${creatingData.unit == undefined ? "-" : creatingData.unit}</td>`;
+    } else if (noUnitRefColumnTable.indexOf(testTitle) == -1) {
       testHTML += `
               <td>${
                 creatingData.unit == undefined ? "-" : creatingData.unit
@@ -1102,6 +1165,7 @@ function reportSectionCreator(testTitle, testDatas) {
                    
    `;
     }
+
     testHTML += `</tr>`;
   });
   testHTML += `<tbody>

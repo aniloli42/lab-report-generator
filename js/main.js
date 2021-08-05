@@ -1,23 +1,6 @@
 import { checkUser, jsonReader } from "./check.js";
 checkUser();
 
-// show hide password
-const showBtn = document.getElementById("showBtn");
-showBtn.addEventListener("click", () => {
-  const passwordBox = document.getElementById("password");
-
-  //   change the text of showBtn
-  const host = location.origin;
-  showBtn.src == `${host}/imgs/eye.svg`
-    ? (showBtn.src = "./imgs/eye-off.svg")
-    : (showBtn.src = "./imgs/eye.svg");
-
-  // change the type of password box
-  showBtn.src == `${host}/imgs/eye-off.svg`
-    ? (passwordBox.type = "text")
-    : (passwordBox.type = "password");
-});
-
 // when the button clicked
 const showMessage = document.getElementById("showMessage");
 
