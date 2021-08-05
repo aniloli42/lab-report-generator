@@ -9,11 +9,17 @@
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+body {
+    display: grid;
+    align-content: space-between;
+    min-height: 100vh;
+}
+
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 30px;
+    padding: 10px;
     background-color: var(--header-color);
 }
 
@@ -33,7 +39,7 @@ header {
 
 /* Search Person Div */
 .search-div {
-    padding: 10px 30px;
+    padding: 10px;
 }
 
 .search-div h2 {
@@ -67,7 +73,7 @@ hr {
 
 /* reports */
 .reports-div {
-    padding: 10px 30px 20px;
+    padding: 10px;
 }
 
 .reports-div h2 {
@@ -142,10 +148,32 @@ hr {
     margin-left: 20px;
 }
 
+/* footer */
+.footer {
+    align-self: end;
+    width: 100%;
+    background-color: #ccc;
+    color: #000;
+    text-align: center;
+    padding: 15px;
+}
+
 @media (min-width:700px) {
     .reports {
         grid-template-columns: repeat(2, minmax(300px, auto));
     }
+header {
+    padding: 20px;
+}
+
+.search-div {
+    padding: 20px;
+}
+
+.reports-div {
+    padding: 20px;
+}
+
 }
 
 @media (min-width: 1440px) {
@@ -162,5 +190,16 @@ hr {
         padding: 5px 10px;
         font-weight: bold;
         font-size: 18px;
+    }
+    header {
+        padding: 30px;
+    }
+
+    .search-div {
+        padding: 30px;
+    }
+
+    .reports-div {
+        padding: 30px;
     }
 }
