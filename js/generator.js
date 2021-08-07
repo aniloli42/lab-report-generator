@@ -40,7 +40,7 @@ const labTestHTML = {
                 <div class="input-div">
                 <label for="wbc">WBC</label>
                 <div class="inputfield">
-                    <input type="text" name="wbc" id="wbc" autocapitalize="off"/>
+                    <input type="text" name="wbc" id="wbc" autocomplete="off"/>
                     <div class="unit">Ref.RANG: 4000 - 11000</div>
                     <div class="unit">/cu-mm</div>
                     
@@ -49,7 +49,7 @@ const labTestHTML = {
                 <div class="input-div">
                 <label for="rbc">RBC</label>
                 <div class="inputfield">
-                    <input type="text" name="rbc" id="rbc" autocapitalize="off"/>
+                    <input type="text" name="rbc" id="rbc" autocomplete="off"/>
                     <div class="unit">Ref.RANG: 4.5 - 6.5</div>
                     <div class="unit">Million cu-mm</div>
                 </div>
@@ -57,7 +57,7 @@ const labTestHTML = {
                 <div class="input-div">
                 <label for="platelates">Platelates</label>
                 <div class="inputfield">
-                    <input type="text" name="platelates" id="platelates" autocapitalize="off"/>
+                    <input type="text" name="platelates" id="platelates" autocomplete="off"/>
                     <div class="unit">Ref.RANG: 150000 - 450000</div>
                     <div class="unit">/cu-mm</div>
                 </div>
@@ -65,7 +65,7 @@ const labTestHTML = {
                 <div class="input-div">
                 <label for="hb">HB</label>
                 <div class="inputfield">
-                    <input type="text" name="hb" id="hb" autocapitalize="off"/>
+                    <input type="text" name="hb" id="hb" autocomplete="off"/>
                     <div class="unit">Ref.RANG: M 12.5-18 F 11.5-16.5</div>
                     <div class="unit">G/dl</div>
                 </div>
@@ -73,7 +73,7 @@ const labTestHTML = {
                 <div class="input-div">
                 <label for="pcv">PCV</label>
                 <div class="inputfield">
-                    <input type="text" name="pcv" id="pcv" autocapitalize="off"/>
+                    <input type="text" name="pcv" id="pcv" autocomplete="off"/>
                     <div class="unit">Ref.RANG: 36%-54%</div>
                     <div class="unit">Fl</div>
                 </div>
@@ -81,21 +81,21 @@ const labTestHTML = {
                 <div class="input-div">
                 <label for="mcv">MCV</label>
                 <div class="inputfield">
-                    <input type="text" name="mcv" id="mcv" autocapitalize="off"/>
+                    <input type="text" name="mcv" id="mcv" autocomplete="off"/>
                     <div class="unit">Fl</div>
                 </div>
                 </div>
                 <div class="input-div">
                 <label for="mch">MCH</label>
                 <div class="inputfield">
-                    <input type="text" name="mch" id="mch" autocapitalize="off"/>
+                    <input type="text" name="mch" id="mch" autocomplete="off"/>
                     <div class="unit">Pg</div>
                 </div>
                 </div>
                 <div class="input-div">
                 <label for="mchc">MCHC</label>
                 <div class="inputfield">
-                    <input type="text" name="mchc" MCHCid="mchc" MCHC autocapitalize="off"/>
+                    <input type="text" name="mchc" MCHCid="mchc" MCHC autocomplete="off"/>
                     <div class="unit">%</div>
                 </div>
                 </div>
@@ -106,7 +106,7 @@ const labTestHTML = {
             <div class="input-div">
               <label for="neutrophil">Neutrophil</label>
               <div class="inputfield">
-                <input type="text" name="neutrophil" id="neutrophil" autocapitalize="off"/>
+                <input type="text" name="neutrophil" id="neutrophil" autocomplete="off"/>
                 <div class="unit">Ref.RANG: 40-70</div>
                 <div class="unit">%</div>
               </div>
@@ -114,7 +114,7 @@ const labTestHTML = {
             <div class="input-div">
               <label for="lymphocyte">Lymphocyte</label>
               <div class="inputfield">
-                <input type="text" name="lymphocyte" id="lymphocyte" autocapitalize="off"/>
+                <input type="text" name="lymphocyte" id="lymphocyte" autocomplete="off"/>
                 <div class="unit">Ref.RANG: 20-40</div>
                 <div class="unit">%</div>
               </div>
@@ -122,7 +122,7 @@ const labTestHTML = {
             <div class="input-div">
               <label for="monocyte">Monocyte</label>
               <div class="inputfield">
-                <input type="text" name="monocyte" id="monocyte" autocapitalize="off"/>
+                <input type="text" name="monocyte" id="monocyte" autocomplete="off"/>
                 <div class="unit">Ref.RANG: 2-10</div>
                 <div class="unit">%</div>
               </div>
@@ -130,7 +130,7 @@ const labTestHTML = {
             <div class="input-div">
               <label for="eosinophil">Eosinophil</label>
               <div class="inputfield">
-                <input type="text" name="eosinophil" id="eosinophil" autocapitalize="off"/>
+                <input type="text" name="eosinophil" id="eosinophil" autocomplete="off"/>
                 <div class="unit">Ref.RANG: 2-6</div>
                 <div class="unit">%</div>
               </div>
@@ -138,7 +138,7 @@ const labTestHTML = {
             <div class="input-div">
               <label for="basophils">Basophils</label>
               <div class="inputfield">
-                <input type="text" name="basophils" id="basophils" autocapitalize="off"/>
+                <input type="text" name="basophils" id="basophils" autocomplete="off"/>
                 <div class="unit">Ref.RANG: 0-1</div>
                 <div class="unit">%</div>
               </div>
@@ -146,7 +146,7 @@ const labTestHTML = {
             <div class="input-div">
               <label for="reticulocyte">Reticulocyte</label>
               <div class="inputfield">
-                <input type="text" name="reticulocyte" id="reticulocyte" autocapitalize="off"/>
+                <input type="text" name="reticulocyte" id="reticulocyte" autocomplete="off"/>
                 <div class="unit">Ref.RANG: 2-6</div>
                 <div class="unit">%</div>
               </div>
@@ -154,7 +154,7 @@ const labTestHTML = {
             <div class="input-div">
               <label for="esr">ESR-(Wintrobes's)</label>
               <div class="inputfield">
-                <input type="text" name="esr" id="esr" autocapitalize="off"/>
+                <input type="text" name="esr" id="esr" autocomplete="off"/>
                 <div class="unit">Ref.RANG: M 0-9 F 0-20</div>
                 <div class="unit">mm/1st hr</div>
               </div>
@@ -162,7 +162,7 @@ const labTestHTML = {
             <div class="input-div">
               <label for="bt">BT</label>
               <div class="inputfield">
-                <input type="text" name="bt" id="bt" autocapitalize="off"/>
+                <input type="text" name="bt" id="bt" autocomplete="off"/>
                 <div class="unit">Ref.RANG: 1-7</div>
                 <div class="unit">mm/min</div>
               </div>
@@ -170,7 +170,7 @@ const labTestHTML = {
             <div class="input-div">
               <label for="ct">CT</label>
               <div class="inputfield">
-                <input type="text" name="ct" id="ct" autocapitalize="off"/>
+                <input type="text" name="ct" id="ct" autocomplete="off"/>
                 <div class="unit">Ref.RANG: 5-10</div>
                 <div class="unit">mm/min</div>
               </div>
@@ -178,21 +178,21 @@ const labTestHTML = {
             <div class="input-div">
               <label for="rh">Blood Group/ RH</label>
               <div class="inputfield">
-                <input type="text" name="rh" id="rh" autocapitalize="off"/>
+                <input type="text" name="rh" id="rh" autocomplete="off"/>
               </div>
             </div>
 
             <div class="input-div">
               <label for="mpMf">Mp/MF</label>
               <div class="inputfield">
-                <input type="text" name="mpMf" id="mpMf" autocapitalize="off"/>
+                <input type="text" name="mpMf" id="mpMf" autocomplete="off"/>
               </div>
             </div>
 
             <div class="input-div">
               <label for="sickline">Sickline test</label>
               <div class="inputfield">
-                <input type="text" name="sickline" id="sickline" autocapitalize="off"/>
+                <input type="text" name="sickline" id="sickline" autocomplete="off"/>
               </div>
             </div>
           </div>`,
@@ -201,7 +201,7 @@ const labTestHTML = {
             <div class="input-div">
               <label for="fasting">Fasting (F)</label>
               <div class="inputfield">
-                <input type="text" name="fasting" id="fasting" autocapitalize="off"/>
+                <input type="text" name="fasting" id="fasting" autocomplete="off"/>
                 <div class="unit">Ref.RANG: 70-110</div>
                 <div class="unit">mg%</div>
               </div>
@@ -210,7 +210,7 @@ const labTestHTML = {
             <div class="input-div">
               <label for="bloodSugar">Blood Sugar (PP)</label>
               <div class="inputfield">
-                <input type="text" name="bloodSugar" id="bloodSugar" autocapitalize="off"/>
+                <input type="text" name="bloodSugar" id="bloodSugar" autocomplete="off"/>
                 <div class="unit">Ref.RANG: 70-140</div>
                 <div class="unit">mg%</div>
               </div>
@@ -219,7 +219,7 @@ const labTestHTML = {
             <div class="input-div">
               <label for="random">Random (R)</label>
               <div class="inputfield">
-                <input type="text" name="random" id="random" autocapitalize="off"/>
+                <input type="text" name="random" id="random" autocomplete="off"/>
                 <div class="unit">Ref.RANG: 70-140</div>
                 <div class="unit">mg%</div>
               </div>
@@ -228,7 +228,7 @@ const labTestHTML = {
             <div class="input-div">
               <label for="bUrea">B-urea</label>
               <div class="inputfield">
-                <input type="text" name="bUrea" id="bUrea" autocapitalize="off"/>
+                <input type="text" name="bUrea" id="bUrea" autocomplete="off"/>
                 <div class="unit">Ref.RANG: 15-45</div>
                 <div class="unit">mg%</div>
               </div>
@@ -237,7 +237,7 @@ const labTestHTML = {
             <div class="input-div">
               <label for="sCreatinine">S-creatinine</label>
               <div class="inputfield">
-                <input type="text" name="sCreatinine" id="sCreatinine" autocapitalize="off"/>
+                <input type="text" name="sCreatinine" id="sCreatinine" autocomplete="off"/>
                 <div class="unit">Ref.RANG: 0.4-1.4</div>
                 <div class="unit">mg%</div>
               </div>
@@ -246,7 +246,7 @@ const labTestHTML = {
             <div class="input-div">
               <label for="uricAcid">Uric Acid</label>
               <div class="inputfield">
-                <input type="text" name="uricAcid" id="uricAcid" autocapitalize="off"/>
+                <input type="text" name="uricAcid" id="uricAcid" autocomplete="off"/>
                 <div class="unit">Ref.RANG: M 2-7 F 2-6</div>
                 <div class="unit">mg%</div>
               </div>
@@ -259,7 +259,7 @@ const labTestHTML = {
                   type="text"
                   name="bilirubinTotal"
                   id="bilirubinTotal"
-                  autocapitalize="off"
+                  autocomplete="off"
                 />
                 <div class="unit">Ref.RANG: 0.4-1.2</div>
                 <div class="unit">mg%</div>
@@ -273,7 +273,7 @@ const labTestHTML = {
                   type="text"
                   name="bilirubinDirect"
                   id="bilirubinDirect"
-                  autocapitalize="off"
+                  autocomplete="off"
                 />
                 <div class="unit">Ref.RANG: 0.0-0.4</div>
                 <div class="unit">mg%</div>
@@ -283,7 +283,7 @@ const labTestHTML = {
             <div class="input-div">
               <label for="alp">ALP</label>
               <div class="inputfield">
-                <input type="text" name="alp" id="alp" autocapitalize="off"/>
+                <input type="text" name="alp" id="alp" autocomplete="off"/>
                 <div class="unit">Ref.RANG: 80-310</div>
                 <div class="unit">IU/L</div>
               </div>
@@ -292,7 +292,7 @@ const labTestHTML = {
             <div class="input-div">
               <label for="sgpt">SGPT</label>
               <div class="inputfield">
-                <input type="text" name="sgpt" id="sgpt" autocapitalize="off"/>
+                <input type="text" name="sgpt" id="sgpt" autocomplete="off"/>
                 <div class="unit">Ref.RANG: 5-49</div>
                 <div class="unit">IU/L</div>
               </div>
@@ -301,7 +301,7 @@ const labTestHTML = {
             <div class="input-div">
               <label for="sgot">SGOT</label>
               <div class="inputfield">
-                <input type="text" name="sgot" id="sgot" autocapitalize="off"/>
+                <input type="text" name="sgot" id="sgot" autocomplete="off"/>
                 <div class="unit">Ref.RANG: 5-45</div>
                 <div class="unit">IU/L</div>
               </div>
@@ -310,7 +310,7 @@ const labTestHTML = {
             <div class="input-div">
               <label for="totalProtein">Total Protein</label>
               <div class="inputfield">
-                <input type="text" name="totalProtein" id="totalProtein" autocapitalize="off"/>
+                <input type="text" name="totalProtein" id="totalProtein" autocomplete="off"/>
                 <div class="unit">Ref.RANG: 6-8</div>
                 <div class="unit">Mg%</div>
               </div>
@@ -319,7 +319,7 @@ const labTestHTML = {
             <div class="input-div">
               <label for="albumin">Albumin</label>
               <div class="inputfield">
-                <input type="text" name="albumin" id="albumin" autocapitalize="off"/>
+                <input type="text" name="albumin" id="albumin" autocomplete="off"/>
                 <div class="unit">Ref.RANG: 3.5-5</div>
                 <div class="unit">Mg%</div>
               </div>
@@ -332,7 +332,7 @@ const labTestHTML = {
                   type="text"
                   name="totalCholestrol"
                   id="totalCholestrol"
-                  autocapitalize="off"
+                  autocomplete="off"
                 />
                 <div class="unit">Ref.RANG: 150-250</div>
                 <div class="unit">Mg%</div>
@@ -342,7 +342,7 @@ const labTestHTML = {
             <div class="input-div">
               <label for="triglycerides">Triglycerides</label>
               <div class="inputfield">
-                <input type="text" name="triglycerides" id="triglycerides" autocapitalize="off"/>
+                <input type="text" name="triglycerides" id="triglycerides" autocomplete="off"/>
                 <div class="unit">Ref.RANG: 30-170</div>
                 <div class="unit">Mg%</div>
               </div>
@@ -355,7 +355,7 @@ const labTestHTML = {
                   type="text"
                   name="hdlCholesterol"
                   id="hdlCholesterol"
-                  autocapitalize="off"
+                  autocomplete="off"
                 />
                 <div class="unit">Ref.RANG: >35</div>
                 <div class="unit">Mg%</div>
@@ -369,7 +369,7 @@ const labTestHTML = {
                   type="text"
                   name="ldlCholesterol"
                   id="ldlCholesterol"
-                  autocapitalize="off"
+                  autocomplete="off"
                 />
                 <div class="unit">Ref.RANG: <150 </div>
                 <div class="unit">Mg%</div>
@@ -379,7 +379,7 @@ const labTestHTML = {
             <div class="input-div">
               <label for="vldl">VLDL</label>
               <div class="inputfield">
-                <input type="text" name="vldl" id="vldl" autocapitalize="off"/>
+                <input type="text" name="vldl" id="vldl" autocomplete="off"/>
                 <div class="unit">Ref.RANG: <40</div>
                 <div class="unit">Mg%</div>
               </div>
@@ -388,7 +388,7 @@ const labTestHTML = {
             <div class="input-div">
               <label for="ldh">LDH</label>
               <div class="inputfield">
-                <input type="text" name="ldh" id="ldh" autocapitalize="off"/>
+                <input type="text" name="ldh" id="ldh" autocomplete="off"/>
                 <div class="unit">Ref.RANG: 225-450</div>
                 <div class="unit">Mg%</div>
               </div>
@@ -397,7 +397,7 @@ const labTestHTML = {
             <div class="input-div">
               <label for="cpk">CPK</label>
               <div class="inputfield">
-                <input type="text" name="cpk" id="cpk" autocapitalize="off"/>
+                <input type="text" name="cpk" id="cpk" autocomplete="off"/>
                 <div class="unit">Ref.RANG: <190</div>
                 <div class="unit">IU/L</div>
               </div>
@@ -406,7 +406,7 @@ const labTestHTML = {
             <div class="input-div">
               <label for="sodium">Na+(Sodium)</label>
               <div class="inputfield">
-                <input type="text" name="sodium" id="sodium" autocapitalize="off"/>
+                <input type="text" name="sodium" id="sodium" autocomplete="off"/>
                 <div class="unit">Ref.RANG: 135-155</div>
                 <div class="unit">MEq/L</div>
               </div>
@@ -415,7 +415,7 @@ const labTestHTML = {
             <div class="input-div">
               <label for="potassium">K+(Potassium)</label>
               <div class="inputfield">
-                <input type="text" name="potassium" id="potassium" autocapitalize="off"/>
+                <input type="text" name="potassium" id="potassium" autocomplete="off"/>
                 <div class="unit">Ref.RANG: 3.5-5.5</div>
                 <div class="unit">MEq/L</div>
               </div>
@@ -424,7 +424,7 @@ const labTestHTML = {
             <div class="input-div">
               <label for="serumAmylase">Serum Amylase</label>
               <div class="inputfield">
-                <input type="text" name="serumAmylase" id="serumAmylase" autocapitalize="off"/>
+                <input type="text" name="serumAmylase" id="serumAmylase" autocomplete="off"/>
                 <div class="unit">Ref.RANG: <200</div>
                 <div class="unit">IU/L</div>
               </div>
@@ -433,7 +433,7 @@ const labTestHTML = {
             <div class="input-div">
               <label for="calcium">Calcium</label>
               <div class="inputfield">
-                <input type="text" name="calcium" id="calcium" autocapitalize="off"/>
+                <input type="text" name="calcium" id="calcium" autocomplete="off"/>
                 <div class="unit">Ref.RANG: 8.7-10.4</div>
                 <div class="unit">Mg%</div>
               </div>
@@ -447,21 +447,21 @@ const labTestHTML = {
             <div class="input-div">
               <label for="investigation">Investigation</label>
               <div class="inputfield">
-              <input type="text" name="investigation" id="investigation" autocapitalize="off"/>
+              <input type="text" name="investigation" id="investigation" autocomplete="off"/>
               </div>
             </div>
 
             <div class="input-div">
               <label for="collectionTime">Collection Time</label>
               <div class="inputfield">
-                <input type="text" name="collectionTime" id="collectionTime" autocapitalize="off"/>
+                <input type="text" name="collectionTime" id="collectionTime" autocomplete="off"/>
               </div>
             </div>
 
             <div class="input-div">
               <label for="volume">Volume</label>
               <div class="inputfield">
-                <input type="text" name="volume" id="volume" autocapitalize="off"/>
+                <input type="text" name="volume" id="volume" autocomplete="off"/>
                 <div class="unit">Ref.RANG: 3-5</div>
                 <div class="unit">ml</div>
               </div>
@@ -470,14 +470,14 @@ const labTestHTML = {
             <div class="input-div">
               <label for="colour">Colour</label>
               <div class="inputfield">
-                <input type="text" name="colour" id="colour" autocapitalize="off"/>
+                <input type="text" name="colour" id="colour" autocomplete="off"/>
               </div>
             </div>
 
             <div class="input-div">
               <label for="ph">PH</label>
               <div class="inputfield">
-                <input type="text" name="ph" id="ph" autocapitalize="off"/>
+                <input type="text" name="ph" id="ph" autocomplete="off"/>
               </div>
             </div>
 
@@ -488,7 +488,7 @@ const labTestHTML = {
                   type="text"
                   name="examinationTime"
                   id="examinationTime"
-                  autocapitalize="off"
+                  autocomplete="off"
                 />
               </div>
             </div>
@@ -496,7 +496,7 @@ const labTestHTML = {
             <div class="input-div">
               <label for="motile">Motile</label>
               <div class="inputfield">
-                <input type="text" name="motile" id="motile" autocapitalize="off"/>
+                <input type="text" name="motile" id="motile" autocomplete="off"/>
                 <div class="unit">Ref.RANG: 60-80</div>
                 <div class="unit">%</div>
               </div>
@@ -505,7 +505,7 @@ const labTestHTML = {
             <div class="input-div">
               <label for="nonMotile">Non Motile</label>
               <div class="inputfield">
-                <input type="text" name="nonMotile" id="nonMotile" autocapitalize="off"/>
+                <input type="text" name="nonMotile" id="nonMotile" autocomplete="off"/>
                 <div class="unit">Ref.RANG: 20</div>
                 <div class="unit">%</div>
               </div>
@@ -518,7 +518,7 @@ const labTestHTML = {
                   type="text"
                   name="sluggishMotile"
                   id="sluggishMotile"
-                  autocapitalize="off"
+                  autocomplete="off"
                 />
               </div>
             </div>
@@ -526,7 +526,7 @@ const labTestHTML = {
             <div class="input-div">
               <label for="totalCount">Total Count</label>
               <div class="inputfield">
-                <input type="text" name="totalCount" id="totalCount" autocapitalize="off"/>
+                <input type="text" name="totalCount" id="totalCount" autocomplete="off"/>
                 <div class="unit">Ref.RANG: 60-150</div>
                 <div class="unit">million/ml</div>
               </div>
@@ -535,7 +535,7 @@ const labTestHTML = {
             <div class="input-div">
               <label for="pusCell">Pus Cell</label>
               <div class="inputfield">
-                <input type="text" name="pusCell" id="pusCell" autocapitalize="off"/>
+                <input type="text" name="pusCell" id="pusCell" autocomplete="off"/>
                 <div class="unit">/HPF</div>
               </div>
             </div>
@@ -547,7 +547,7 @@ const labTestHTML = {
                   type="text"
                   name="epithelialCell"
                   id="epithelialCell"
-                  autocapitalize="off"
+                  autocomplete="off"
                 />
                 <div class="unit">/HPF</div>
               </div>
@@ -556,7 +556,7 @@ const labTestHTML = {
             <div class="input-div">
               <label for="comment">Comment</label>
               <div class="inputfield">
-                <input type="text" name="comment" id="comment" autocapitalize="off"/>
+                <input type="text" name="comment" id="comment" autocomplete="off"/>
               </div>
             </div>
 
@@ -788,7 +788,7 @@ const labTestHTML = {
             <div class="input-div">
               <label for="urineColour">Colour</label>
               <div class="inputfield">
-                <input type="text" name="urineColour" id="urineColour" autocapitalize="off"/>
+                <input type="text" name="urineColour" id="urineColour" autocomplete="off"/>
               </div>
             </div>
 
@@ -799,7 +799,7 @@ const labTestHTML = {
                   type="text"
                   name="urineTransparency"
                   id="urineTransparency"
-                  autocapitalize="off"
+                  autocomplete="off"
                 />
               </div>
             </div>
@@ -811,7 +811,7 @@ const labTestHTML = {
                   type="text"
                   name="urineReaction"
                   id="urineReaction"
-                  autocapitalize="off"
+                  autocomplete="off"
                 />
               </div>
             </div>
@@ -823,14 +823,14 @@ const labTestHTML = {
             <div class="input-div">
               <label for="urineAlbumin">Albumin (Protein)</label>
               <div class="inputfield">
-                <input type="text" name="urineAlbumin" id="urineAlbumin" autocapitalize="off"/>
+                <input type="text" name="urineAlbumin" id="urineAlbumin" autocomplete="off"/>
               </div>
             </div>
 
             <div class="input-div">
               <label for="urineSugar">Sugar</label>
               <div class="inputfield">
-                <input type="text" name="urineSugar" id="urineSugar" autocapitalize="off"/>
+                <input type="text" name="urineSugar" id="urineSugar" autocomplete="off"/>
               </div>
             </div>
 
@@ -845,7 +845,7 @@ const labTestHTML = {
                   type="text"
                   name="urineEpithelial"
                   id="urineEpithelial"
-                  autocapitalize="off"
+                  autocomplete="off"
                 />
                 <div class="unit">/HPF</div>
               </div>
@@ -854,7 +854,7 @@ const labTestHTML = {
             <div class="input-div">
               <label for="urinePus">Pus Cell</label>
               <div class="inputfield">
-                <input type="text" name="urinePus" id="urinePus" autocapitalize="off"/>
+                <input type="text" name="urinePus" id="urinePus" autocomplete="off"/>
                 <div class="unit">/HPF</div>
               </div>
             </div>
@@ -862,7 +862,7 @@ const labTestHTML = {
             <div class="input-div">
               <label for="urineRBC">RBC</label>
               <div class="inputfield">
-                <input type="text" name="urineRBC" id="urineRBC" autocapitalize="off"/>
+                <input type="text" name="urineRBC" id="urineRBC" autocomplete="off"/>
                 <div class="unit">/HPF</div>
               </div>
             </div>
@@ -870,7 +870,7 @@ const labTestHTML = {
             <div class="input-div">
               <label for="urineCaOxalate">Ca-Oxalate</label>
               <div class="inputfield">
-                <input type="text" name="urineCaOxalate" id="urineCaOxalate" autocapitalize="off"/>
+                <input type="text" name="urineCaOxalate" id="urineCaOxalate" autocomplete="off"/>
                 <div class="unit">/HPF</div>
               </div>
             </div>
@@ -878,21 +878,21 @@ const labTestHTML = {
             <div class="input-div">
               <label for="urineCrystals">Crystals</label>
               <div class="inputfield">
-                <input type="text" name="urineCrystals" id="urineCrystals" autocapitalize="off"/>
+                <input type="text" name="urineCrystals" id="urineCrystals" autocomplete="off"/>
               </div>
             </div>
 
             <div class="input-div">
               <label for="urineOthers">Others</label>
               <div class="inputfield">
-                <input type="text" name="urineOthers" id="urineOthers" autocapitalize="off"/>
+                <input type="text" name="urineOthers" id="urineOthers" autocomplete="off"/>
               </div>
             </div>
 
             <div class="input-div">
               <label for="urineHCG">HCG (Pregnancy)</label>
               <div class="inputfield">
-                <input type="text" name="urineHCG" id="urineHCG" autocapitalize="off"/>
+                <input type="text" name="urineHCG" id="urineHCG" autocomplete="off"/>
               </div>
             </div>
             <!-- End input-->
@@ -1013,7 +1013,6 @@ mainForm.addEventListener("submit", (e) => {
     };
     formInputs.push(inputObj);
   }
-
   generatePrintReport();
 });
 
@@ -1042,12 +1041,13 @@ document.getElementById("resetBtn").addEventListener("click", () => {
 });
 
 // generate print report
-function generatePrintReport() {
+async function generatePrintReport() {
   showPrintDiv.style.display = "block";
   containerDiv.style.display = "none";
   containerDiv.style.overflow = "hidden";
   customerDetailsPopulater(formInputs);
-  reportPopulater(formInputs);
+  let getReports = await testFetcher();
+  reportPopulater(formInputs, getReports);
 }
 
 // customer Details
@@ -1088,21 +1088,22 @@ function customerDetailsPopulater(customerDetailsArray) {
 }
 
 // Report Populator
-function reportPopulater(reportDetailsArray) {
+function reportPopulater(reportDetailsArray, getReports) {
   let markedTest = reportDetailsArray.filter((tests) => {
     return tests.name == "checkTest";
   });
 
-  markedTest.forEach((reports) => {
-    reportSectionTestValidator(reports.value);
-  });
+  for (let reports of markedTest) {
+    reportSectionTestValidator(reports.value, getReports);
+  }
 }
 
 // report section test validator
 let testAvailable = [];
-async function reportSectionTestValidator(testName) {
-  let reportTestDetails = await testFetcher(testName);
-  reportTestDetails.forEach((testDetails) => {
+function reportSectionTestValidator(testName, getReports) {
+  let reportTestDetails = getReports[`${testName}`];
+
+  for (let testDetails of reportTestDetails) {
     let testValid = formInputs.filter(
       (tests) => tests.name == testDetails.test
     );
@@ -1110,16 +1111,16 @@ async function reportSectionTestValidator(testName) {
       testDetails.value = testValid[0].value;
       testAvailable.push(testDetails);
     }
-  });
+  }
   reportSectionCreator(testName, testAvailable);
   testAvailable = [];
 }
 
 // data Fetcher
-async function testFetcher(testFetchName) {
+async function testFetcher() {
   let data = await fetch(`../json/test.json`);
   let fetchedData = await data.json();
-  return fetchedData[`${testFetchName}`];
+  return fetchedData;
 }
 
 // report Section Creator
@@ -1199,7 +1200,7 @@ function reportSectionCreator(testTitle, testDatas) {
         </tr>
         <tr>
               <td>${creatingData.name}</td>
-              <td>${creatingData.value}</td>
+              <td class="ttbold">${creatingData.value}</td>
         `;
       printedPhysicalTitle = true;
     } else if (
@@ -1214,7 +1215,7 @@ function reportSectionCreator(testTitle, testDatas) {
         </tr>
         <tr>
               <td>${creatingData.name}</td>
-              <td>${creatingData.value}</td>
+              <td class="ttbold">${creatingData.value}</td>
         `;
       printedChemicalTitle = true;
     } else if (
@@ -1234,14 +1235,14 @@ function reportSectionCreator(testTitle, testDatas) {
       </tr>
       <tr>
             <td>${creatingData.name}</td>
-            <td>${creatingData.value}</td>
+            <td class="ttbold">${creatingData.value}</td>
       `;
       printedMicroTitle = true;
     } else {
       testHTML += `
             <tr>
               <td>${creatingData.name}</td>
-              <td>${creatingData.value}</td>
+              <td class="ttbold">${creatingData.value}</td>
               `;
     }
 
