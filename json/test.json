@@ -22,7 +22,7 @@
       "test": "hb",
       "name": "HB",
       "unit": "G/dl",
-      "ref": "M12.5-180 F11.5-16.5"
+      "ref": "M12.5-18 F11.5-16.5"
     },
     {
       "test": "pcv",
@@ -317,7 +317,7 @@
     },
     {
       "test": "totalCount",
-      "name": "Test Count",
+      "name": "Total Count",
       "unit": "million/ml",
       "ref": ""
     },
@@ -402,6 +402,12 @@
       "ref": ""
     },
     {
+      "test": "ns1",
+      "name": "NS1",
+      "unit": "",
+      "ref": ""
+    },
+    {
       "test": "troponinI",
       "name": "Troponin I",
       "unit": "",
@@ -409,21 +415,15 @@
     },
     {
       "test": "tbCard",
-      "name": "T.B card .IgG/Igm",
+      "name": "T.B card",
       "unit": "",
       "ref": ""
     },
     {
-      "test": "hPyloriIgG",
-      "name": "H-Pylori/IgG",
+      "test": "hPylori",
+      "name": "H-Pylori",
       "unit": "",
       "ref":""
-    },
-    {
-      "test": "hPyloriIgM",
-      "name": "H-Pylori/IgM",
-      "unit": "",
-      "ref": ""
     },
     {
       "test": "hev",
@@ -492,6 +492,12 @@
     {
       "test": "urineTransparency",
       "name": "Transparency",
+      "unit": "",
+      "ref": ""
+    },
+    {
+      "test": "urineReaction",
+      "name": "Reaction",
       "unit": "",
       "ref": ""
     },
