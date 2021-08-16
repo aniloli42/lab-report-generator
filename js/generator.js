@@ -904,14 +904,14 @@ if (sessionStorage.getItem("reportData") != "") {
   sessionStorage.removeItem("reportData");
 }
 
-let DateFunc = new Date();
-let todayDate = `${DateFunc.getMonth() + 1}-${DateFunc.getDay() + 1}`;
-
 let setLabNo = () => {
   labNo.value = localStorage.getItem("labNo");
 };
 
-let labDateFinder = (todayDate) => {
+let labDateFinder = () => {
+  let DateFunc = new Date();
+  let todayDate = `${DateFunc.getMonth() + 1}-${DateFunc.getDate()}`;
+  todayDate = todayDate.toString();
   if (localStorage.getItem("todayDate") == null) {
     localStorage.setItem("todayDate", todayDate);
     localStorage.setItem("labNo", 10);
@@ -930,7 +930,7 @@ let labDateFinder = (todayDate) => {
   setLabNo();
 };
 
-labDateFinder(todayDate);
+labDateFinder();
 
 if (localStorage.getItem("directPrint") != "") {
   getDirectPrintData = JSON.parse(localStorage.getItem("directPrint"));
@@ -1057,7 +1057,10 @@ function customerDetailsPopulater(customerDetailsArray) {
       showPatientName.innerText = `Name: ${customerDetails.value}`;
 
     if (customerDetails.name == "patientAge")
-      showPatientAge.innerText = `Age: ${customerDetails.value} y`;
+      showPatientAge.innerText = `Age: ${customerDetails.value}`;
+
+    if (customerDetails.name == "patientBirth")
+      showPatientAge.innerText += ` ${customerDetails.value}`;
 
     if (customerDetails.name == "patientGender")
       showPatientSex.innerText = `Sex: ${customerDetails.value}`;
@@ -1073,12 +1076,12 @@ function customerDetailsPopulater(customerDetailsArray) {
   });
 
   // showDate in report
-  if ((getDirectPrintData != "") & (getDirectPrintData.source == 0)) {
+  if (getDirectPrintData != "" && getDirectPrintData.source == 0) {
     let DateCreator = new Date();
-    displayDate = `${DateCreator.getUTCFullYear()}-${
-      DateCreator.getUTCMonth() + 1
-    }-${DateCreator.getUTCDate()} AD`;
-    showDate.innerText = `Date: ${displayDate}`;
+    displayDate = `${DateCreator.getFullYear()}-${
+      DateCreator.getMonth() + 1
+    }-${DateCreator.getDate()} AD`;
+    showDate.innerText = `Date: ${displayDate.toString()}`;
     formInputs.push({
       name: "testDate",
       value: displayDate,
