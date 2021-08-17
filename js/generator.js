@@ -903,21 +903,22 @@ const labTestHTML = {
 if (sessionStorage.getItem("reportData") != "") {
   sessionStorage.removeItem("reportData");
 }
+let DateFunc = new Date();
+let todayDate = `${DateFunc.getMonth() + 1}-${DateFunc.getDate()}`;
+todayDate = todayDate.toString();
 
 let setLabNo = () => {
   labNo.value = localStorage.getItem("labNo");
 };
 
-let labDateFinder = () => {
-  let DateFunc = new Date();
-  let todayDate = `${DateFunc.getMonth() + 1}-${DateFunc.getDate()}`;
-  todayDate = todayDate.toString();
+let labDateFinder = (todayDate) => {
   if (localStorage.getItem("todayDate") == null) {
     localStorage.setItem("todayDate", todayDate);
     localStorage.setItem("labNo", 10);
     setLabNo();
     return;
   }
+
   if (localStorage.getItem("todayDate") == todayDate) {
     if (localStorage.getItem("labNo") == null) {
       localStorage.setItem("labNo", 10);
@@ -925,12 +926,13 @@ let labDateFinder = () => {
     setLabNo();
     return;
   }
+
   localStorage.setItem("labNo", 10);
   localStorage.setItem("todayDate", todayDate);
   setLabNo();
 };
 
-labDateFinder();
+labDateFinder(todayDate);
 
 if (localStorage.getItem("directPrint") != "") {
   getDirectPrintData = JSON.parse(localStorage.getItem("directPrint"));
@@ -944,6 +946,7 @@ if (localStorage.getItem("directPrint") != "") {
     if (localStorage.getItem("printNumber") != null) {
       printNumber = localStorage.getItem("printNumber");
     }
+
     let getSavedReports = JSON.parse(localStorage.getItem("savedReports"));
     getSavedReports[`${parseInt(printNumber)}`].forEach((tests) => {
       formInputs.push(tests);
@@ -1264,7 +1267,7 @@ function reportSectionCreator(testTitle, testDatas) {
 
     testHTML += `</tr>`;
   });
-  testHTML += `<tbody>
+  testHTML += `
             </tbody>
           </table>
         </section>
@@ -1321,24 +1324,17 @@ savePrint.addEventListener("click", () => {
     if (
       findMatchLabTestNo != undefined &&
       findMatchLabTestNo != null &&
-      findMatchLabTestNo.value === labNum.value &&
-      labDate.value == todayDate
-    ) {
-      updateReport(savedReports, index, labDate.value);
-      loopExecutedBreak = 1;
-      return;
-    }
-
-    if (
-      findMatchLabTestNo != undefined &&
-      findMatchLabTestNo != null &&
-      findMatchLabTestNo.value !== labNum.value &&
+      findMatchLabTestNo.value == labNum.value &&
       labDate.value == todayDate
     ) {
       if (loopExecutedBreak == 0) {
+        updateReport(savedReports, index, labDate.value);
+        loopExecutedBreak = 1;
+      }
+    } else {
+      if (loopExecutedBreak == 0) {
         saveReport(savedReports);
         loopExecutedBreak = 1;
-        return;
       }
     }
   });
@@ -1350,7 +1346,7 @@ function createAndSaveReport() {
     value: todayDate,
   });
   localStorage.setItem("savedReports", JSON.stringify([formInputs]));
-  saveStatus("Successfully Report Saved!!!");
+  saveStatus("Successfully Saved Report!!!");
   labNoUpgrade();
 }
 
@@ -1358,7 +1354,7 @@ function updateReport(savedReports, index, labDate) {
   formInputs.push({ name: "labTestDate", value: labDate });
   savedReports[index] = formInputs;
   localStorage.setItem("savedReports", JSON.stringify(savedReports));
-  saveStatus("Successfully Updated Saved!!!");
+  saveStatus("Successfully Updated Report!!!");
 }
 
 function saveReport(savedReports) {
@@ -1369,7 +1365,7 @@ function saveReport(savedReports) {
   savedReports.push(formInputs);
 
   localStorage.setItem("savedReports", JSON.stringify(savedReports));
-  saveStatus("Successfully Report Saved!!!");
+  saveStatus("Successfully Saved Report!!!");
   labNoUpgrade();
 }
 

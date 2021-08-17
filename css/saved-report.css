@@ -176,7 +176,7 @@ header {
 
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1280px) {
     .reports {
         grid-template-columns: repeat(4, minmax(300px, auto));
     }
