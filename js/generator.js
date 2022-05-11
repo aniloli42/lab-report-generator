@@ -897,7 +897,7 @@ const labTestHTML = {
               </div>
             </div>
             <!-- End input-->
-          </div>`,
+          </div>`
 };
 
 // remove the sessionstorage value
@@ -1013,7 +1013,7 @@ mainForm.addEventListener("submit", (e) => {
     if (reportEntries[1] === "") continue;
     let inputObj = {
       name: `${reportEntries[0]}`,
-      value: `${reportEntries[1]}`,
+      value: `${reportEntries[1]}`
     };
     formInputs.push(inputObj);
   }
@@ -1095,7 +1095,7 @@ function customerDetailsPopulater(customerDetailsArray) {
     showDate.innerText = `Date: ${displayDate.toString()}`;
     formInputs.push({
       name: "testDate",
-      value: displayDate,
+      value: displayDate
     });
     return;
   }
@@ -1146,32 +1146,32 @@ function reportSectionCreator(testTitle, testDatas) {
   let titleMaker = [
     {
       name: "haematology",
-      visibleTitle: "HAEMATOLOGY TEST",
+      visibleTitle: "HAEMATOLOGY TEST"
     },
     {
       name: "differential",
-      visibleTitle: "DIFFERENTIAL COUNT",
+      visibleTitle: "DIFFERENTIAL COUNT"
     },
     {
       name: "biochemistry",
-      visibleTitle: "BIOCHEMISTRY TEST",
+      visibleTitle: "BIOCHEMISTRY TEST"
     },
     {
       name: "semen",
-      visibleTitle: "SEMEN ANALYSIS",
+      visibleTitle: "SEMEN ANALYSIS"
     },
     {
       name: "serology",
-      visibleTitle: "SEROLOGY TEST",
+      visibleTitle: "SEROLOGY TEST"
     },
     {
       name: "widal",
-      visibleTitle: "WIDAL TEST",
+      visibleTitle: "WIDAL TEST"
     },
     {
       name: "urine",
-      visibleTitle: "URINE ANALYSIS",
-    },
+      visibleTitle: "URINE ANALYSIS"
+    }
   ];
   let noUnitRefColumnTable = ["serology", "widal", "urine"];
   let showTitle = titleMaker.filter((title) => title.name == testTitle);
@@ -1356,16 +1356,14 @@ function saveReport(savedReports = [], index = -1, labDate = null, id = null) {
   console.log(savedReports, index, labDate, id);
 
   if (isIdAdded === false) {
-    console.log("Called");
-
     formInputs.push({
       name: "labTestDate",
-      value: labDate ?? todayDate,
+      value: labDate ?? todayDate
     });
 
     formInputs.unshift({
       name: "id",
-      value: id ?? Date.now(),
+      value: id ?? Date.now()
     });
 
     isIdAdded = true;
@@ -1374,7 +1372,7 @@ function saveReport(savedReports = [], index = -1, labDate = null, id = null) {
   if (index !== -1) {
     savedReports[index] = formInputs;
   } else {
-    savedReports.push(formInputs);
+    savedReports.unshift(formInputs);
   }
 
   localStorage.setItem("savedReports", JSON.stringify(savedReports));
