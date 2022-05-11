@@ -1,205 +1,238 @@
 :root {
-    --header-color: #ccc;
+  --header-color: #ccc;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    display: grid;
-    align-content: space-between;
-    min-height: 100vh;
+  display: grid;
+  align-content: space-between;
+  min-height: 100vh;
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    background-color: var(--header-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: var(--header-color);
 }
 
 .brand {
-    font-weight: bold;
-    font-size: 1.5em;
-    text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.5em;
+  text-transform: uppercase;
 }
 
-
-
 #backBTN {
-    padding: 8px 20px;
-    cursor: pointer;
-    font-weight: 480;
+  padding: 8px 20px;
+  cursor: pointer;
+  font-weight: 480;
 }
 
 /* Search Person Div */
 .search-div {
-    padding: 10px;
+  padding: 10px;
 }
 
 .search-div h2 {
-    font-weight: 450;
-    margin-bottom: 10px;
+  font-weight: 450;
+  margin-bottom: 10px;
 }
 
 .errorSearch {
-    display: none;
-    margin: 5px 0;
-    color: red;
+  display: none;
+  margin: 5px 0;
+  color: red;
 }
 
 hr {
-    width: 96%;
-    margin: 0 auto;
+  width: 96%;
+  margin: 0 auto;
 }
 
 #searchTest {
-    outline: none;
-    width: 100%;
-    padding: 5px 10px;
-    font-weight: bold;
-    font-size: 16px;
-    margin-right: 10px;
+  outline: none;
+  width: 100%;
+  padding: 5px 10px;
+  font-weight: bold;
+  font-size: 16px;
+  margin-right: 10px;
 }
 
 #searchTest::placeholder {
-    font-weight: normal;
+  font-weight: normal;
 }
 
 /* reports */
 .reports-div {
-    padding: 10px;
+  padding: 10px;
 }
 
 .reports-div h2 {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .reports-div .error {
-    color: #666;
+  color: #666;
 }
 
 .reports {
-    display: grid;
-    grid-template-columns: repeat(1, auto);
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(1, auto);
+  gap: 20px;
+  align-items: start;
 }
 
 .report {
-    padding: 20px;
-    border: 1px solid rgb(0, 0, 0);
-    box-shadow: -2px 2px 4px #ccc;
+  padding: 20px;
+  border: 1px solid rgb(0, 0, 0);
+  box-shadow: -1px 0px 6px #ccc;
 }
 
 .report h2 {
-    font-weight: 500;
-    text-transform: uppercase;
-    margin-bottom: 2px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 2px;
 }
 
 .report .date {
-    font-size: 16px;
-    font-weight: 500;
-    color: rgb(145, 144, 144);
+  font-size: 16px;
+  font-weight: 500;
+  color: rgb(145, 144, 144);
 }
 
 .report-btns {
-    display: flex;
+  display: flex;
 }
 
 .report button {
-    width: 100%;
-    padding: 10px;
-    color: #fff;
-    font-size: 18px;
-    border: none;
-    transition: 250ms all;
-    cursor: pointer;
+  width: 100%;
+  padding: 10px;
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  transition: 250ms all;
+  cursor: pointer;
 }
 
 .report .printTest {
-    background-color: rgb(27, 151, 33);
+  background-color: rgb(27, 151, 33);
 }
 
 .report .removeTest {
-    background-color: rgb(218, 42, 42);
-    margin-left: 10px;
+  background-color: rgb(218, 42, 42);
+  margin-left: 10px;
 }
 
 .report .printTest:hover {
-    background-color: rgb(35, 177, 42);
+  background-color: rgb(35, 177, 42);
 }
 
 .report .removeTest:hover {
-    background-color: rgb(240, 74, 74);
+  background-color: rgb(240, 74, 74);
 }
 
-.report ul {
-    margin: 15px 0 20px;
-    list-style-type: circle;
+.report .tests {
+  margin: 0.5em 0;
+  list-style-type: circle;
 }
 
-.report ul li {
-    margin-left: 20px;
+.report .tests .test {
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+}
+
+.report .tests .test::before {
+  content: "🧪";
+  padding-right: 0.5em;
 }
 
 /* footer */
 .footer {
-    align-self: end;
-    width: 100%;
-    background-color: #ccc;
-    color: #000;
-    text-align: center;
-    padding: 15px;
+  align-self: end;
+  width: 100%;
+  background-color: #ccc;
+  color: #000;
+  text-align: center;
+  padding: 15px;
 }
 
-@media (min-width:700px) {
-    .reports {
-        grid-template-columns: repeat(2, minmax(300px, auto));
-    }
-header {
+.load {
+  display: none;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  border: none;
+  outline: none;
+  background-color: #ccc;
+  padding: 0.75em 1.5em;
+  border-radius: 0.25em;
+  color: #090909;
+  cursor: pointer;
+  pointer-events: none;
+}
+
+.load:focus-visible {
+  color: #f5efef;
+  background-color: #aaa;
+}
+
+.load::before {
+  content: "⟳";
+  padding-right: 0.5em;
+}
+
+.load.active {
+  pointer-events: all;
+  display: flex;
+}
+
+@media (min-width: 700px) {
+  .reports {
+    grid-template-columns: repeat(2, minmax(300px, auto));
+  }
+  header {
     padding: 20px;
-}
+  }
 
-.search-div {
+  .search-div {
     padding: 20px;
-}
+  }
 
-.reports-div {
+  .reports-div {
     padding: 20px;
-}
-
+  }
 }
 
 @media (min-width: 1280px) {
-    .reports {
-        grid-template-columns: repeat(4, minmax(300px, auto));
-    }
+  .reports {
+    grid-template-columns: repeat(4, minmax(300px, auto));
+  }
 
-    .brand {
-        font-size: 1.8em;
-    }
+  .brand {
+    font-size: 1.8em;
+  }
 
-    #searchTest {
-        width: 500px;
-        padding: 5px 10px;
-        font-weight: bold;
-        font-size: 18px;
-    }
-    header {
-        padding: 30px;
-    }
+  #searchTest {
+    width: 500px;
+    padding: 5px 10px;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  header {
+    padding: 30px;
+  }
 
-    .search-div {
-        padding: 30px;
-    }
+  .search-div {
+    padding: 30px;
+  }
 
-    .reports-div {
-        padding: 30px;
-    }
+  .reports-div {
+    padding: 30px;
+  }
 }

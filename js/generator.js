@@ -32,6 +32,7 @@ let displayDate = "";
 let successSaving = document.querySelector("#successSaving");
 let labNo = document.getElementById("labNo");
 let isLabNoUpdate = false;
+let isIdAdded = false;
 
 // Code Of Adding the test as per checkbox selected
 const labTestHTML = {
@@ -43,7 +44,7 @@ const labTestHTML = {
                     <input type="text" name="wbc" id="wbc" autocomplete="off"/>
                     <div class="unit">Ref.RANG: 4000 - 11000</div>
                     <div class="unit">/cu-mm</div>
-                    
+
                 </div>
                 </div>
                 <div class="input-div">
@@ -1062,8 +1063,15 @@ function customerDetailsPopulater(customerDetailsArray) {
     if (customerDetails.name == "patientAge")
       showPatientAge.innerText = `Age: ${customerDetails.value}`;
 
-    if (customerDetails.name == "patientBirth")
-      showPatientAge.innerText += ` ${customerDetails.value}`;
+    if (customerDetails.name == "patientBirth") {
+      const patient = Number(showPatientAge.innerText.slice(5));
+
+      showPatientAge.innerText += ` ${
+        patient === 1
+          ? customerDetails.value.slice(0, customerDetails.value.length - 1)
+          : customerDetails.value
+      }`;
+    }
 
     if (customerDetails.name == "patientGender")
       showPatientSex.innerText = `Sex: ${customerDetails.value}`;
@@ -1261,7 +1269,7 @@ function reportSectionCreator(testTitle, testDatas) {
                 creatingData.unit == undefined ? "-" : creatingData.unit
               }</td>
               <td>${creatingData.ref == undefined ? "-" : creatingData.ref}</td>
-                   
+
    `;
     }
 
@@ -1288,6 +1296,7 @@ printEdit.addEventListener("click", () => {
   containerDiv.style.display = "grid";
   containerDiv.style.overflow = "unset";
   showReports.innerHTML = "";
+  isIdAdded = false;
 });
 
 // New Patient Print Available
@@ -1298,75 +1307,82 @@ nextPatient.addEventListener("click", () => {
   containerDiv.style.overflow = "unset";
   containerDiv.style.display = "grid";
   showReports.innerHTML = "";
+
+  const labNumber = Number(localStorage.getItem("labNo"));
+  if (labNumber === labNo.value) {
+    labNoUpgrade();
+  }
   setLabNo();
   isLabNoUpdate = false;
+  isIdAdded = false;
 });
 
 // Click on Save Report
 savePrint.addEventListener("click", () => {
-  let labNum = document.getElementById("labNo");
-  if (localStorage.getItem("savedReports") == null)
-    return createAndSaveReport();
+  const labNum = document.getElementById("labNo");
+  const patientName = document.querySelector("#patientName");
+  if (localStorage.getItem("savedReports") == null) return saveReport();
 
-  let savedReports = JSON.parse(localStorage.getItem("savedReports"));
+  const savedReports = JSON.parse(localStorage.getItem("savedReports"));
 
-  let loopExecutedBreak = 0;
+  const searchReportIndex = savedReports.findIndex((reports) => {
+    let findMatchLabTestNo = reports.find((tested) => tested.name == "labNo");
 
-  savedReports.forEach((reports, index) => {
-    let findMatchLabTestNo = reports.find((tested) => {
-      return tested.name == "labNo";
-    });
+    let labDate = reports.find((labTested) => labTested.name == "labTestDate");
 
-    let labDate = reports.find((labTested) => {
-      return labTested.name == "labTestDate";
-    });
+    let labPatientName = reports.find(
+      (report) => report.name === "patientName"
+    ).value;
 
     if (
-      findMatchLabTestNo != undefined &&
-      findMatchLabTestNo != null &&
-      findMatchLabTestNo.value == labNum.value &&
-      labDate.value == todayDate
-    ) {
-      if (loopExecutedBreak == 0) {
-        updateReport(savedReports, index, labDate.value);
-        loopExecutedBreak = 1;
-      }
-    } else {
-      if (loopExecutedBreak == 0) {
-        saveReport(savedReports);
-        loopExecutedBreak = 1;
-      }
-    }
+      findMatchLabTestNo.value === labNum.value &&
+      labDate.value === todayDate &&
+      labPatientName.toLowerCase() === patientName.value.toLowerCase()
+    )
+      return reports;
   });
+
+  if (searchReportIndex === -1) {
+    saveReport(savedReports);
+    return;
+  }
+
+  const reportId = savedReports[searchReportIndex][0].value;
+
+  saveReport(savedReports, searchReportIndex, todayDate, reportId);
 });
 
-function createAndSaveReport() {
-  formInputs.push({
-    name: "labTestDate",
-    value: todayDate,
-  });
-  localStorage.setItem("savedReports", JSON.stringify([formInputs]));
-  saveStatus("Successfully Saved Report!!!");
-  labNoUpgrade();
-}
+function saveReport(savedReports = [], index = -1, labDate = null, id = null) {
+  console.log(savedReports, index, labDate, id);
 
-function updateReport(savedReports, index, labDate) {
-  formInputs.push({ name: "labTestDate", value: labDate });
-  savedReports[index] = formInputs;
+  if (isIdAdded === false) {
+    console.log("Called");
+
+    formInputs.push({
+      name: "labTestDate",
+      value: labDate ?? todayDate,
+    });
+
+    formInputs.unshift({
+      name: "id",
+      value: id ?? Date.now(),
+    });
+
+    isIdAdded = true;
+  }
+
+  if (index !== -1) {
+    savedReports[index] = formInputs;
+  } else {
+    savedReports.push(formInputs);
+  }
+
   localStorage.setItem("savedReports", JSON.stringify(savedReports));
-  saveStatus("Successfully Updated Report!!!");
-}
-
-function saveReport(savedReports) {
-  formInputs.push({
-    name: "labTestDate",
-    value: todayDate,
-  });
-  savedReports.push(formInputs);
-
-  localStorage.setItem("savedReports", JSON.stringify(savedReports));
   saveStatus("Successfully Saved Report!!!");
-  labNoUpgrade();
+
+  if (id == null) {
+    labNoUpgrade();
+  }
 }
 
 function saveStatus(message) {
@@ -1379,6 +1395,9 @@ function saveStatus(message) {
 
 function labNoUpgrade() {
   if (isLabNoUpdate) return;
-  localStorage.setItem("labNo", parseInt(labNo.value) + 1);
+
+  const labNumber = Number(localStorage.getItem("labNo")) + 1;
+
+  localStorage.setItem("labNo", labNumber);
   isLabNoUpdate = true;
 }

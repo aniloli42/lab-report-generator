@@ -6,38 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/saved-report.css" />
     <title>Saved Report | Lab Report Generator</title>
+    <script src="../js/validate.js" type="module" defer></script>
+    <script src="../js/saved-report.js" defer></script>
   </head>
   <body>
     <div class="container">
-    <header>
-      <div class="brand">
-        Lab Report Generator
+      <header>
+        <div class="brand">Lab Report Generator</div>
+        <button id="backBTN">BACK</button>
+      </header>
+      <div class="search-div">
+        <h2>Search Person Test</h2>
+        <input type="text" name="search" id="searchTest" />
       </div>
-      <button id="backBTN">BACK</button>
-    
-    </header>
-    <div class="search-div">
-      <h2>Search Person Test</h2>
-      <input type="text" name="search" id="searchTest">
-      
-    </div>
-    <hr>
+      <hr />
 
-
-    <main class="reports-div" id="reportdiv">
-      <h2>Reports</h2>
-      <p class="errorSearch" id="searchResult">
-        Result not found!
-      </p>
-      <section class="reports" id="reportDisplay">
-      </section>
-    </main>
+      <main class="reports-div" id="reportdiv">
+        <h2>Reports</h2>
+        <p class="errorSearch" id="searchResult">Result not found!</p>
+        <section class="reports" id="reportDisplay"></section>
+        <button class="load" data-load>Load More</button>
+      </main>
     </div>
-    
+
     <!-- Footer -->
     <div class="footer">2021 &copy; Lab Report Generator - Anil Oli</div>
-
-    <script src="../js/validate.js" type="module"></script>
-    <script src="../js/saved-report.js" async></script>
   </body>
 </html>
