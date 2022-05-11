@@ -1032,11 +1032,21 @@ function testCheck() {
 
 // Error Message Creator
 function errorMessage(message) {
-  errorMessageDiv.style.cssText = "transform:scaleY(1)";
+  errorMessageDiv.style.visibility = "visible";
+  errorMessageDiv.style.opacity = 1;
+  errorMessageDiv.style.transform = "translateY(0)";
+
   errorMessageDiv.innerHTML = message;
-  setTimeout(() => {
-    errorMessageDiv.style.cssText = "transform:scaleY(0)";
-  }, 1500);
+  const animTimeout = setTimeout(() => {
+    clearTimeout(animTimeout);
+    errorMessageDiv.style.opacity = 0;
+    errorMessageDiv.style.transform = "translateY(100%)";
+
+    const hideTimeout = setTimeout(() => {
+      errorMessageDiv.style.visibility = "hidden";
+      clearTimeout(hideTimeout);
+    }, 250);
+  }, 1000);
 }
 
 // reset click handler
