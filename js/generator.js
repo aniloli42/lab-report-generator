@@ -1384,11 +1384,18 @@ function saveReport(savedReports = [], index = -1, labDate = null, id = null) {
 }
 
 function saveStatus(message) {
-  successSaving.style.display = "block";
+  successSaving.style.visibility = "visible";
+  successSaving.style.transform = "translateY(0)";
   successSaving.innerText = message;
-  setTimeout(() => {
-    successSaving.style.display = "none";
-  }, 800);
+  const animTimeout = setTimeout(() => {
+    successSaving.style.transform = "translateY(-100%)";
+    clearTimeout(animTimeout);
+
+    const hiddenTimeout = setTimeout(() => {
+      successSaving.style.visibility = "hidden";
+      clearTimeout(hiddenTimeout);
+    }, 200);
+  }, 1000);
 }
 
 function labNoUpgrade() {
