@@ -456,4 +456,8 @@ tr > th:nth-child(2) {
   #printManageBtns {
     display: none;
   }
+
+  #successSaving {
+    display: none;
+  }
 }
