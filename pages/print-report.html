@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Print Lab Report | Lab Report Generator</title>
+    <script src="../scripts/print.js" defer></script>
+    <link rel="stylesheet" href="../styles/print.css" />
+  </head>
+  <body>
+    <!-- print Report  -->
+    <section>
+      <div id="successSaving"></div>
+      <article id="printManageBtns">
+        <button id="printEdit">Edit</button>
+        <button id="nextPatient">Next Patient</button>
+        <button id="printPage">Print</button>
+        <button id="savePrint">Save</button>
+        <button id="backToSaved">Back</button>
+      </article>
+      <article id="contactDetails">
+        <p id="pan">PAN NO. 605875386</p>
+        <p id="reg">REG NO. 2074-75-616</p>
+        <p id="num1">
+          <span class="fontUI"
+            ><img src="../assets/imgs/telephone.png" width="18px" /></span
+          >9847983093
+        </p>
+        <p id="num2">
+          <span class="fontUI"
+            ><img src="../assets/imgs/telephone.png" width="18px" /></span
+          >9822846895
+        </p>
+      </article>
+      <header>
+        <h1>SAGARMATHA PATHOLOGY CENTER</h1>
+        <h2>GADHAWA 6 GADHAWA</h2>
+      </header>
+      <article id="patientDetails">
+        <p id="showPatientName">Name:</p>
+        <p id="showDate">Date:</p>
+        <p id="showPatientAge">Age:</p>
+        <p id="showPatientSex">Sex:</p>
+        <p id="showDoctorName">Doctor:</p>
+        <p id="showLabNo">Lab No:</p>
+      </article>
+
+      <!-- showreports -->
+      <article id="showReports"></article>
+      <footer id="signatures">
+        <p class="endText">*** End Of Report ***</p>
+        <div>
+          <span class="line"></span>
+          <p>Mr.Surendra Acharya</p>
+          <p>NHPC No. B-4735MLT</p>
+        </div>
+      </footer>
+    </section>
+  </body>
+</html>

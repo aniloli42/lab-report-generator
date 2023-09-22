@@ -1,0 +1,253 @@
+@import "./global.css";
+
+/* contact details */
+article#contactDetails {
+  display: grid;
+  grid-template-areas:
+    "pan num1"
+    "reg num2";
+  width: 95%;
+  margin: 0 auto;
+}
+
+article p {
+  font-weight: bold;
+}
+
+#pan {
+  grid-area: pan;
+}
+
+#reg {
+  grid-area: reg;
+}
+
+#num1,
+#num2 {
+  display: flex;
+  align-items: center;
+  justify-self: end;
+}
+
+#num1 {
+  grid-area: num1;
+}
+
+#num2 {
+  grid-area: num2;
+}
+
+/* lab name & address */
+section header {
+  background-color: #fff;
+  flex-direction: column;
+}
+
+section h1 {
+  font-size: 2.2rem;
+  font-weight: bolder;
+  text-align: center;
+}
+
+/* patientDetails */
+
+#patientDetails {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 10px;
+  border: 2px solid;
+  width: 95%;
+  margin: 0 auto;
+}
+
+#showDate {
+  justify-self: end;
+}
+
+#showPatientSex {
+  justify-self: end;
+}
+
+#showLabNo {
+  justify-self: end;
+}
+
+#showReports .tdSubTitle {
+  border: none;
+  text-align: left;
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+/* manage print btn */
+#printManageBtns {
+  width: 95%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+  margin: 10px auto;
+  gap: 0.5em;
+}
+
+#backToSaved {
+  display: none;
+}
+
+button {
+  width: 100%;
+  height: 2.5rem;
+  font-weight: bold;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* fontUI */
+.fontUI {
+  display: block;
+  margin-right: 5px;
+}
+
+.fontUI img {
+  display: block;
+  width: 18px;
+}
+
+#showReports .ttbold {
+  font-weight: 500;
+}
+
+/* show report */
+#showReports {
+  width: 95%;
+  margin: 0 auto;
+}
+
+#showReports section {
+  width: 100%;
+}
+
+#showReports section table {
+  width: max-content;
+  min-width: 100%;
+  max-width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+  border-width: 1px;
+}
+
+#showReports section table * {
+  border-collapse: collapse;
+  border-style: solid;
+  border-color: #000;
+  border-width: 1px;
+  padding: 3px 5px;
+}
+
+/* signatures */
+#signatures {
+  font-weight: bold;
+  width: 95%;
+  margin: 20px auto 20px;
+  text-align: center;
+  padding: 20px;
+}
+
+#signatures div {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+#signatures > p {
+  text-align: center;
+}
+
+.line {
+  display: block;
+  width: 200px;
+  height: 2px;
+  margin-bottom: 5px;
+  border-top: 2px dotted #000;
+}
+
+#successSaving {
+  display: flex;
+  visibility: hidden;
+  width: 100%;
+  height: fit-content;
+  position: absolute;
+  top: 0;
+  padding: 15px;
+  font-weight: bold;
+  text-align: center;
+  background-color: rgb(36, 172, 36);
+  color: white;
+  transform: translateY(-100%);
+  transition: transform 300ms ease-in-out;
+}
+
+/* table adjustment for print*/
+table {
+  width: max-content;
+}
+
+tr > th:first-child {
+  width: 200px;
+  max-width: 200px;
+}
+
+tr > th:nth-child(2) {
+  min-width: 200px;
+  max-width: 250px;
+}
+
+/* bigger than 480 px */
+@media (min-width: 480px) {
+  /* Input label */
+  .input-group .input-div label {
+    min-width: 150px;
+  }
+}
+
+/* bigger than 720px */
+@media (min-width: 720px) {
+  /* Input label */
+  .input-group .input-div label {
+    min-width: 200px;
+  }
+}
+
+/* bigger than 1080px */
+@media (min-width: 1080px) {
+  .grid-container {
+    width: 980px;
+    margin: 0 auto;
+  }
+  header .brand h1 {
+    font-size: 1.8em;
+  }
+
+  header {
+    padding: 30px;
+  }
+}
+
+/* print css */
+@media print {
+  section#print {
+    width: 100%;
+    height: 100%;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  #printManageBtns {
+    display: none;
+  }
+
+  #successSaving {
+    display: none;
+  }
+}

@@ -5,7 +5,7 @@
   --dark: #0a1031;
   --semidark: #21314a;
   --lightdark: #354154;
-  --header-color:#ccc;
+  --header-color: #ccc;
   --header-brand-text: var(--black);
 }
 
@@ -91,14 +91,14 @@ header .logout {
 .btn-div {
   width: 100%;
   min-height: 200px;
-  background-color: rgba(100, 99, 99, 0.747);
+  background-color: rgba(14, 14, 14, 0.747);
   display: grid;
   gap: 20px;
   place-items: center;
   cursor: pointer;
   user-select: none;
   padding: 30px;
-  transition: all 300ms;
+  transition: color 300ms, background-color 300ms;
 }
 
 .btn-div img {
@@ -106,7 +106,8 @@ header .logout {
   height: auto;
 }
 
-.btn-div:hover {
+.btn-div:hover,
+.btn-div:focus-visible {
   background-color: rgb(78, 55, 55);
   color: var(--white);
 }
@@ -160,29 +161,26 @@ header .logout {
 
 @media (min-width: 980px) {
   header .brand h1 {
-  font-size: 1.8em;
+    font-size: 1.8em;
   }
 
-
-
   .main-section {
-  justify-content: start;
+    justify-content: start;
   }
 
   .btn-div img {
-      --min-height: 22em;
-      }
-.btn-div p {
-  font-size: 1.5em;
-}
+    --min-height: 22em;
+  }
+  .btn-div p {
+    font-size: 1.5em;
+  }
 
-header {
-  padding: 30px;
-}
+  header {
+    padding: 30px;
+  }
 
-.main-section {
-  padding: 30px;
-  gap: 30px
-}
-
+  .main-section {
+    padding: 30px;
+    gap: 30px;
+  }
 }

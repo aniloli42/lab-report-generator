@@ -5,45 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login | Lab Report Generator</title>
-    <link rel="stylesheet" href="./css/main.css" />
+    <script type="module" src="./scripts/main.js" defer></script>
+    <link rel="stylesheet" href="./styles/main.css" />
   </head>
 
   <body>
     <div class="container">
       <div class="login-box">
         <header>
-          <h1>Login | Lab Report Generator</h1>
+          <h1>Lab Report Generator</h1>
         </header>
         <div class="form-div">
-          <form method="post" id="userForm">
+          <form method="post" id="userForm" data-login-form>
             <div class="form-controls">
-              <input
-                type="text"
-                placeholder="Username"
-                name="userid"
-                id="username"
-              />
-              <img src="./imgs/user.svg" alt="user image" />
+              <input type="text" placeholder="Username" name="username" />
+              <img src="./assets/imgs/user.svg" alt="user image" />
             </div>
             <div class="form-controls">
-              <input
-                type="password"
-                placeholder="Password"
-                name="password"
-                id="password"
-              />
-              <img src="./imgs/lock.svg" alt="password" />
+              <input type="password" placeholder="Password" name="password" />
+              <img src="./assets/imgs/lock.svg" alt="password" />
             </div>
-            <div class="show-message error" id="showMessage"></div>
             <div class="form-controls form-btn">
               <button type="submit" class="form-button" id="submitButton">
                 Sign In
               </button>
             </div>
+            <div class="show-message error" id="showMessage"></div>
           </form>
         </div>
       </div>
     </div>
-    <script type="module" src="js/main.js"></script>
   </body>
 </html>

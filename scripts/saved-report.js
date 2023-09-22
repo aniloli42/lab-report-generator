@@ -1,8 +1,8 @@
 // Variables
-const backBTN = document.getElementById("backBTN");
-const displayReportsDiv = document.getElementById("reportDisplay");
-const reportDiv = document.getElementsByClassName("report");
-const searchResult = document.getElementById("searchResult");
+const backBTN = document.querySelector("#backBTN");
+const displayReportsDiv = document.querySelector("#reportDisplay");
+const reportDiv = document.querySelector(".report");
+const searchResult = document.querySelector("#searchResult");
 const searchTest = document.querySelector("#searchTest");
 const loadBtn = document.querySelector("[data-load]");
 const RENDER_LIMIT = 6;
@@ -11,14 +11,13 @@ class Paginate {
   #startOffset = 0;
   #currentPage = 1;
   #endoffset;
-  #renderLimit;
+  #renderLimit = RENDER_LIMIT;
   #totalPages;
   #elements;
 
-  constructor(reportArray, renderLimit) {
+  constructor(reportArray) {
     this.#elements = reportArray;
-    this.#renderLimit = renderLimit;
-    this.#totalPages = Math.ceil(reportArray.length / renderLimit);
+    this.#totalPages = Math.ceil(reportArray.length / this.#renderLimit);
 
     if (this.#totalPages > 1) {
       loadBtn.classList.add("active");
@@ -81,7 +80,7 @@ function displayReports(reportArray = null) {
 
   displayReportsDiv.innerHTML = "";
 
-  const paginatedReports = new Paginate(savedReports, RENDER_LIMIT);
+  const paginatedReports = new Paginate(savedReports);
 
   paginatedReports.getNextElements();
 
@@ -177,8 +176,8 @@ function debounce(cb, delay = 500) {
 
 function searchMatchedPersonTest() {}
 
-const printTestBtn = document.getElementsByClassName("printTest");
-const removeTest = document.getElementsByClassName("removeTest");
+const printTestBtn = document.querySelector(".printTest");
+const removeTest = document.querySelectorAll(".removeTest");
 
 // print Report on click
 function printReport(reportIndex) {
@@ -192,7 +191,6 @@ function printReport(reportIndex) {
 // delete Report on click
 function deleteReport(reportIndex) {
   let getData = getReports();
-  console.log(reportIndex[0].value);
   getData = getData.filter((data) => data[0].value !== reportIndex[0].value);
   if (getData.length != 0)
     localStorage.setItem("savedReports", JSON.stringify(getData));

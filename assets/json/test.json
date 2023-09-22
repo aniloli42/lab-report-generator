@@ -334,13 +334,13 @@
       "ref": ""
     },
     {
-      "test":"comment",
+      "test": "comment",
       "name": "Comment",
       "unit": "",
       "ref": ""
     }
   ],
-  "serology":[
+  "serology": [
     {
       "test": "raFactor",
       "name": "RA Factor",
@@ -423,7 +423,7 @@
       "test": "hPylori",
       "name": "H-Pylori",
       "unit": "",
-      "ref":""
+      "ref": ""
     },
     {
       "test": "hev",
@@ -444,7 +444,7 @@
       "ref": ""
     }
   ],
-  "widal":[
+  "widal": [
     {
       "test": "sTyphiO",
       "name": "S.Typhi 'o'",
