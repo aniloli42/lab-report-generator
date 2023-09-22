@@ -35,13 +35,18 @@
             </div>
             <div class="input-div" id="gender">
               <label for="patientGender">Gender</label>
-              <input
-                type="radio"
-                name="gender"
-                value="Male"
-                checked
-                autocomplete="off"
-              />Male <input type="radio" name="gender" value="Female" />Female
+              <label>
+                <input
+                  type="radio"
+                  name="gender"
+                  value="Male"
+                  checked
+                  autocomplete="off"
+                />Male
+              </label>
+              <label>
+                <input type="radio" name="gender" value="Female" />Female
+              </label>
             </div>
             <div class="input-div">
               <label for="patientAge">Age</label>
@@ -53,10 +58,18 @@
                 oninput="this.setCustomValidity('')"
                 autocomplete="off"
               />
-              &nbsp; &nbsp;
-              <input type="radio" name="birthType" value="years" checked />years
-              &nbsp;
-              <input type="radio" name="birthType" value="months" />months
+
+              <label>
+                <input
+                  type="radio"
+                  name="birthType"
+                  value="years"
+                  checked
+                />years
+              </label>
+              <label>
+                <input type="radio" name="birthType" value="months" />months
+              </label>
             </div>
           </div>
 
