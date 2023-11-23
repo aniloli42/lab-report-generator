@@ -567,6 +567,15 @@ const labTestHTML = {
             <div class="input-title">SEROLOGY TEST</div>
 
             <div class="input-div">
+            <label for="scrubTyphus">Scrub Typhus</label>
+            <div class="inputfield">
+              <input type="radio" name="scrubTyphus" id="scrubTyphus" value="" checked/>&nbsp;Not Measured&nbsp;
+              <input type="radio" name="scrubTyphus" id="scrubTyphus" value="Positive" />&nbsp;Positive&nbsp;
+              <input type="radio" name="scrubTyphus" id="scrubTyphus" value="Negative" />&nbsp;Negative&nbsp;
+            </div>
+          </div>
+
+            <div class="input-div">
               <label for="raFactor">RA factor</label>
               <div class="inputfield">
                 <input type="radio" name="raFactor" id="raFactor" value="" checked/>&nbsp;Not Measured&nbsp;
@@ -639,13 +648,22 @@ const labTestHTML = {
             </div>
 
             <div class="input-div">
-              <label for="dengue">Dengue Igm/IgG</label>
+              <label for="dengueIgM">Dengue IgM</label>
               <div class="inputfield">
-              <input type="radio" name="dengue" id="dengue" value="" checked/>&nbsp;Not Measured&nbsp;
-              <input type="radio" name="dengue" id="dengue" value="Positive" />&nbsp;Positive&nbsp;
-              <input type="radio" name="dengue" id="dengue" value="Negative" />&nbsp;Negative&nbsp;
+              <input type="radio" name="dengueIgM" id="dengueIgM" value="" checked/>&nbsp;Not Measured&nbsp;
+              <input type="radio" name="dengueIgM" id="dengueIgM" value="Positive" />&nbsp;Positive&nbsp;
+              <input type="radio" name="dengueIgM" id="dengueIgM" value="Negative" />&nbsp;Negative&nbsp;
               </div>
             </div>
+
+            <div class="input-div">
+            <label for="dengueIgG">Dengue IgG</label>
+            <div class="inputfield">
+            <input type="radio" name="dengueIgG" id="dengueIgG" value="" checked/>&nbsp;Not Measured&nbsp;
+            <input type="radio" name="dengueIgG" id="dengueIgG" value="Positive" />&nbsp;Positive&nbsp;
+            <input type="radio" name="dengueIgG" id="dengueIgG" value="Negative" />&nbsp;Negative&nbsp;
+            </div>
+          </div>
 
             <div class="input-div">
               <label for="ns1">NS1</label>

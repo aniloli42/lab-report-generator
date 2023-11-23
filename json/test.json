@@ -334,13 +334,19 @@
       "ref": ""
     },
     {
-      "test":"comment",
+      "test": "comment",
       "name": "Comment",
       "unit": "",
       "ref": ""
     }
   ],
-  "serology":[
+  "serology": [
+    {
+      "test": "scrubTyphus",
+      "name": "Scrub Typhus",
+      "unit": "",
+      "ref": ""
+    },
     {
       "test": "raFactor",
       "name": "RA Factor",
@@ -396,8 +402,14 @@
       "ref": ""
     },
     {
-      "test": "dengue",
-      "name": "Dengue Igm/IgG",
+      "test": "dengueIgM",
+      "name": "Dengue IgM",
+      "unit": "",
+      "ref": ""
+    },
+    {
+      "test": "dengueIgG",
+      "name": "Dengue IgG",
       "unit": "",
       "ref": ""
     },
@@ -423,7 +435,7 @@
       "test": "hPylori",
       "name": "H-Pylori",
       "unit": "",
-      "ref":""
+      "ref": ""
     },
     {
       "test": "hev",
@@ -444,7 +456,7 @@
       "ref": ""
     }
   ],
-  "widal":[
+  "widal": [
     {
       "test": "sTyphiO",
       "name": "S.Typhi 'o'",
