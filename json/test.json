@@ -402,14 +402,14 @@
       "ref": ""
     },
     {
-      "test": "dengueIgM",
-      "name": "Dengue IgM",
+      "test": "dengueIgG",
+      "name": "Dengue IgG",
       "unit": "",
       "ref": ""
     },
     {
-      "test": "dengueIgG",
-      "name": "Dengue IgG",
+      "test": "dengueIgM",
+      "name": "Dengue IgM",
       "unit": "",
       "ref": ""
     },
@@ -432,8 +432,14 @@
       "ref": ""
     },
     {
-      "test": "hPylori",
-      "name": "H-Pylori",
+      "test": "hPyloriAb",
+      "name": "H-Pylori (Ab)",
+      "unit": "",
+      "ref": ""
+    },
+    {
+      "test": "hPyloriAg",
+      "name": "H-Pylori (Ag)",
       "unit": "",
       "ref": ""
     },

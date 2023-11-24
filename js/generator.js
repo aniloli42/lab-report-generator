@@ -619,6 +619,15 @@ const labTestHTML = {
               <input type="radio" name="hav" id="hav" value="Negative" />&nbsp;Negative&nbsp;
               </div>
             </div>
+            
+            <div class="input-div">
+              <label for="hcv">HCV</label>
+              <div class="inputfield">
+              <input type="radio" name="hcv" id="hcv" value="" checked/>&nbsp;Not Measured&nbsp;
+              <input type="radio" name="hcv" id="hcv" value="Positive" />&nbsp;Positive&nbsp;
+              <input type="radio" name="hcv" id="hcv" value="Negative" />&nbsp;Negative&nbsp;
+            </div>
+            </div>
 
             <div class="input-div">
               <label for="hbSag">HBsAg</label>
@@ -647,14 +656,6 @@ const labTestHTML = {
               </div>
             </div>
 
-            <div class="input-div">
-              <label for="dengueIgM">Dengue IgM</label>
-              <div class="inputfield">
-              <input type="radio" name="dengueIgM" id="dengueIgM" value="" checked/>&nbsp;Not Measured&nbsp;
-              <input type="radio" name="dengueIgM" id="dengueIgM" value="Positive" />&nbsp;Positive&nbsp;
-              <input type="radio" name="dengueIgM" id="dengueIgM" value="Negative" />&nbsp;Negative&nbsp;
-              </div>
-            </div>
 
             <div class="input-div">
             <label for="dengueIgG">Dengue IgG</label>
@@ -664,6 +665,15 @@ const labTestHTML = {
             <input type="radio" name="dengueIgG" id="dengueIgG" value="Negative" />&nbsp;Negative&nbsp;
             </div>
           </div>
+
+            <div class="input-div">
+              <label for="dengueIgM">Dengue IgM</label>
+              <div class="inputfield">
+              <input type="radio" name="dengueIgM" id="dengueIgM" value="" checked/>&nbsp;Not Measured&nbsp;
+              <input type="radio" name="dengueIgM" id="dengueIgM" value="Positive" />&nbsp;Positive&nbsp;
+              <input type="radio" name="dengueIgM" id="dengueIgM" value="Negative" />&nbsp;Negative&nbsp;
+              </div>
+            </div>
 
             <div class="input-div">
               <label for="ns1">NS1</label>
@@ -693,11 +703,21 @@ const labTestHTML = {
             </div>
 
             <div class="input-div">
-              <label for="hPylori">H-Pylori</label>
+              <label for="hPyloriAb">H-Pylori (Ab)</label>
               <div class="inputfield">
-              <input type="radio" name="hPylori" id="hPylori" value="" checked/>&nbsp;Not Measured&nbsp;
-              <input type="radio" name="hPylori" id="hPylori" value="Positive" />&nbsp;Positive&nbsp;
-              <input type="radio" name="hPylori" id="hPylori" value="Negative" />&nbsp;Negative&nbsp;
+              <input type="radio" name="hPyloriAb" id="hPyloriAb" value="" checked/>&nbsp;Not Measured&nbsp;
+              <input type="radio" name="hPyloriAb" id="hPyloriAb" value="Positive" />&nbsp;Positive&nbsp;
+              <input type="radio" name="hPyloriAb" id="hPyloriAb" value="Negative" />&nbsp;Negative&nbsp;
+              </div>
+            </div>
+
+
+            <div class="input-div">
+              <label for="hPyloriAg">H-Pylori (Ag)</label>
+              <div class="inputfield">
+              <input type="radio" name="hPyloriAg" id="hPyloriAg" value="" checked/>&nbsp;Not Measured&nbsp;
+              <input type="radio" name="hPyloriAg" id="hPyloriAg" value="Positive" />&nbsp;Positive&nbsp;
+              <input type="radio" name="hPyloriAg" id="hPyloriAg" value="Negative" />&nbsp;Negative&nbsp;
               </div>
             </div>
 
