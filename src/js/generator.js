@@ -1094,7 +1094,7 @@ document.getElementById("resetBtn").addEventListener("click", () => {
 
 // generate print report
 async function generatePrintReport() {
-  showPrintDiv.style.display = "block";
+  showPrintDiv.style.display = "flex";
   containerDiv.style.display = "none";
   containerDiv.style.overflow = "hidden";
   customerDetailsPopulater(formInputs);
