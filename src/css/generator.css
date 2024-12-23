@@ -463,10 +463,19 @@ tr > th:nth-child(2) {
 /* print css */
 @media print {
   @page {
-    margin: 0;
+    size: auto;
+    margin: 0mm;
+  }
+  body {
+    margin: 5mm;
+  }
+
+  .toColor {
+    padding: 10pt;
   }
 
   section#print {
+    border-width: 8pt;
     display: flex;
     width: 100%;
     min-height: 100vh;
